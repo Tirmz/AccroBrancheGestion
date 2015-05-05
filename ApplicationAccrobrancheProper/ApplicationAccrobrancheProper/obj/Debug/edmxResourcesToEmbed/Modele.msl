@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeleAccrobrancheStoreContainer" CdmEntityContainer="Modele">
+    <EntitySetMapping Name="Categorie">
+      <EntityTypeMapping TypeName="ModeleAccrobranche.Categorie">
+        <MappingFragment StoreEntitySet="Categorie">
+          <ScalarProperty Name="idCategorie" ColumnName="idCategorie" />
+          <ScalarProperty Name="libelleCategorie" ColumnName="libelleCategorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fournisseur">
+      <EntityTypeMapping TypeName="ModeleAccrobranche.Fournisseur">
+        <MappingFragment StoreEntitySet="Fournisseur">
+          <ScalarProperty Name="idFournisseur" ColumnName="idFournisseur" />
+          <ScalarProperty Name="nomFournisseur" ColumnName="nomFournisseur" />
+          <ScalarProperty Name="villeFournisseur" ColumnName="villeFournisseur" />
+          <ScalarProperty Name="cpFournisseur" ColumnName="cpFournisseur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LignedeVente">
+      <EntityTypeMapping TypeName="ModeleAccrobranche.LignedeVente">
+        <MappingFragment StoreEntitySet="LignedeVente">
+          <ScalarProperty Name="idLignedeVente" ColumnName="idLignedeVente" />
+          <ScalarProperty Name="idVente" ColumnName="idVente" />
+          <ScalarProperty Name="idProduit" ColumnName="idProduit" />
+          <ScalarProperty Name="quantiteVente" ColumnName="quantiteVente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produit">
+      <EntityTypeMapping TypeName="ModeleAccrobranche.Produit">
+        <MappingFragment StoreEntitySet="Produit">
+          <ScalarProperty Name="idProduit" ColumnName="idProduit" />
+          <ScalarProperty Name="nomProduit" ColumnName="nomProduit" />
+          <ScalarProperty Name="prixProduitHT" ColumnName="prixProduitHT" />
+          <ScalarProperty Name="quantiteStockProduit" ColumnName="quantiteStockProduit" />
+          <ScalarProperty Name="StockAlert" ColumnName="StockAlert" />
+          <ScalarProperty Name="idCategorie" ColumnName="idCategorie" />
+          <ScalarProperty Name="idFournisseur" ColumnName="idFournisseur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vente">
+      <EntityTypeMapping TypeName="ModeleAccrobranche.Vente">
+        <MappingFragment StoreEntitySet="Vente">
+          <ScalarProperty Name="idVente" ColumnName="idVente" />
+          <ScalarProperty Name="dateVente" ColumnName="dateVente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

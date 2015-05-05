@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeleAccrobranche.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="idCategorie" />
+    </Key>
+    <Property Name="idCategorie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="libelleCategorie" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fournisseur">
+    <Key>
+      <PropertyRef Name="idFournisseur" />
+    </Key>
+    <Property Name="idFournisseur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomFournisseur" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="villeFournisseur" Type="varchar" MaxLength="35" Nullable="false" />
+    <Property Name="cpFournisseur" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LignedeVente">
+    <Key>
+      <PropertyRef Name="idLignedeVente" />
+    </Key>
+    <Property Name="idLignedeVente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idVente" Type="int" Nullable="false" />
+    <Property Name="idProduit" Type="int" Nullable="false" />
+    <Property Name="quantiteVente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="idProduit" />
+    </Key>
+    <Property Name="idProduit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomProduit" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="prixProduitHT" Type="float" Nullable="false" />
+    <Property Name="quantiteStockProduit" Type="int" Nullable="false" />
+    <Property Name="StockAlert" Type="int" Nullable="false" />
+    <Property Name="idCategorie" Type="int" Nullable="false" />
+    <Property Name="idFournisseur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vente">
+    <Key>
+      <PropertyRef Name="idVente" />
+    </Key>
+    <Property Name="idVente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateVente" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="LignedeVente_ibfk_1">
+    <End Role="Vente" Type="Self.Vente" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LignedeVente" Type="Self.LignedeVente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vente">
+        <PropertyRef Name="idVente" />
+      </Principal>
+      <Dependent Role="LignedeVente">
+        <PropertyRef Name="idVente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LignedeVente_ibfk_2">
+    <End Role="Produit" Type="Self.Produit" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LignedeVente" Type="Self.LignedeVente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produit">
+        <PropertyRef Name="idProduit" />
+      </Principal>
+      <Dependent Role="LignedeVente">
+        <PropertyRef Name="idProduit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Produit_ibfk_1">
+    <End Role="Fournisseur" Type="Self.Fournisseur" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produit" Type="Self.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="idFournisseur" />
+      </Principal>
+      <Dependent Role="Produit">
+        <PropertyRef Name="idFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Produit_ibfk_2">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produit" Type="Self.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="idCategorie" />
+      </Principal>
+      <Dependent Role="Produit">
+        <PropertyRef Name="idCategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModeleAccrobrancheStoreContainer">
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" Schema="accrocbranchetp" store:Type="Tables" />
+    <EntitySet Name="Fournisseur" EntityType="Self.Fournisseur" Schema="accrocbranchetp" store:Type="Tables" />
+    <EntitySet Name="LignedeVente" EntityType="Self.LignedeVente" Schema="accrocbranchetp" store:Type="Tables" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" Schema="accrocbranchetp" store:Type="Tables" />
+    <EntitySet Name="Vente" EntityType="Self.Vente" Schema="accrocbranchetp" store:Type="Tables" />
+    <AssociationSet Name="LignedeVente_ibfk_1" Association="Self.LignedeVente_ibfk_1">
+      <End Role="Vente" EntitySet="Vente" />
+      <End Role="LignedeVente" EntitySet="LignedeVente" />
+    </AssociationSet>
+    <AssociationSet Name="LignedeVente_ibfk_2" Association="Self.LignedeVente_ibfk_2">
+      <End Role="Produit" EntitySet="Produit" />
+      <End Role="LignedeVente" EntitySet="LignedeVente" />
+    </AssociationSet>
+    <AssociationSet Name="Produit_ibfk_1" Association="Self.Produit_ibfk_1">
+      <End Role="Fournisseur" EntitySet="Fournisseur" />
+      <End Role="Produit" EntitySet="Produit" />
+    </AssociationSet>
+    <AssociationSet Name="Produit_ibfk_2" Association="Self.Produit_ibfk_2">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Produit" EntitySet="Produit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

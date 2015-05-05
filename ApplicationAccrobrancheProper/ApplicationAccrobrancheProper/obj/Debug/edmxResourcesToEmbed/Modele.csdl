@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeleAccrobranche" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="idCategorie" />
+    </Key>
+    <Property Name="idCategorie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libelleCategorie" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LesProduits" Relationship="Self.Produit_ibfk_2" FromRole="Categorie" ToRole="Produit" />
+  </EntityType>
+  <EntityType Name="Fournisseur">
+    <Key>
+      <PropertyRef Name="idFournisseur" />
+    </Key>
+    <Property Name="idFournisseur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomFournisseur" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="villeFournisseur" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cpFournisseur" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="LesProduits" Relationship="Self.Produit_ibfk_1" FromRole="Fournisseur" ToRole="Produit" />
+  </EntityType>
+  <EntityType Name="LignedeVente">
+    <Key>
+      <PropertyRef Name="idLignedeVente" />
+    </Key>
+    <Property Name="idLignedeVente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idVente" Type="Int32" Nullable="false" />
+    <Property Name="idProduit" Type="Int32" Nullable="false" />
+    <Property Name="quantiteVente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LaVente" Relationship="Self.LignedeVente_ibfk_1" FromRole="LignedeVente" ToRole="Vente" />
+    <NavigationProperty Name="LeProduit" Relationship="Self.LignedeVente_ibfk_2" FromRole="LignedeVente" ToRole="Produit" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="idProduit" />
+    </Key>
+    <Property Name="idProduit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nomProduit" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prixProduitHT" Type="Single" Nullable="false" />
+    <Property Name="quantiteStockProduit" Type="Int32" Nullable="false" />
+    <Property Name="StockAlert" Type="Int32" Nullable="false" />
+    <Property Name="idCategorie" Type="Int32" Nullable="false" />
+    <Property Name="idFournisseur" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LaCategorie" Relationship="Self.Produit_ibfk_2" FromRole="Produit" ToRole="Categorie" />
+    <NavigationProperty Name="LeFournisseur" Relationship="Self.Produit_ibfk_1" FromRole="Produit" ToRole="Fournisseur" />
+    <NavigationProperty Name="LesLignesdeVentes" Relationship="Self.LignedeVente_ibfk_2" FromRole="Produit" ToRole="LignedeVente" />
+  </EntityType>
+  <EntityType Name="Vente">
+    <Key>
+      <PropertyRef Name="idVente" />
+    </Key>
+    <Property Name="idVente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dateVente" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="LesLignesdeVentes" Relationship="Self.LignedeVente_ibfk_1" FromRole="Vente" ToRole="LignedeVente" />
+  </EntityType>
+  <Association Name="Produit_ibfk_2">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produit" Type="Self.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="idCategorie" />
+      </Principal>
+      <Dependent Role="Produit">
+        <PropertyRef Name="idCategorie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Produit_ibfk_1">
+    <End Role="Fournisseur" Type="Self.Fournisseur" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Produit" Type="Self.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="idFournisseur" />
+      </Principal>
+      <Dependent Role="Produit">
+        <PropertyRef Name="idFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LignedeVente_ibfk_1">
+    <End Role="Vente" Type="Self.Vente" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LignedeVente" Type="Self.LignedeVente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vente">
+        <PropertyRef Name="idVente" />
+      </Principal>
+      <Dependent Role="LignedeVente">
+        <PropertyRef Name="idVente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LignedeVente_ibfk_2">
+    <End Role="Produit" Type="Self.Produit" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LignedeVente" Type="Self.LignedeVente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produit">
+        <PropertyRef Name="idProduit" />
+      </Principal>
+      <Dependent Role="LignedeVente">
+        <PropertyRef Name="idProduit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Modele" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" />
+    <EntitySet Name="Fournisseur" EntityType="Self.Fournisseur" />
+    <EntitySet Name="LignedeVente" EntityType="Self.LignedeVente" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" />
+    <EntitySet Name="Vente" EntityType="Self.Vente" />
+    <AssociationSet Name="Produit_ibfk_2" Association="Self.Produit_ibfk_2">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Produit" EntitySet="Produit" />
+    </AssociationSet>
+    <AssociationSet Name="Produit_ibfk_1" Association="Self.Produit_ibfk_1">
+      <End Role="Fournisseur" EntitySet="Fournisseur" />
+      <End Role="Produit" EntitySet="Produit" />
+    </AssociationSet>
+    <AssociationSet Name="LignedeVente_ibfk_1" Association="Self.LignedeVente_ibfk_1">
+      <End Role="Vente" EntitySet="Vente" />
+      <End Role="LignedeVente" EntitySet="LignedeVente" />
+    </AssociationSet>
+    <AssociationSet Name="LignedeVente_ibfk_2" Association="Self.LignedeVente_ibfk_2">
+      <End Role="Produit" EntitySet="Produit" />
+      <End Role="LignedeVente" EntitySet="LignedeVente" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
