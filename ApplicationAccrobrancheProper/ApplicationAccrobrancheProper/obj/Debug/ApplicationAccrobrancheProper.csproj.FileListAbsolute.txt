@@ -12,3 +12,17 @@ C:\Users\Tristan\Desktop\COURS B2\Projets\Projet Developpement C# (JL. Bompard)\
 C:\Users\Tristan\Desktop\COURS B2\Projets\Projet Developpement C# (JL. Bompard)\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\EntityFramework.dll
 C:\Users\Tristan\Desktop\COURS B2\Projets\Projet Developpement C# (JL. Bompard)\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\EntityFramework.xml
 C:\Users\Tristan\Desktop\COURS B2\Projets\Projet Developpement C# (JL. Bompard)\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\ApplicationAccrobrancheProper.exe.config
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.exe
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.pdb
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\ApplicationAccrobrancheProper.exe
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\ApplicationAccrobrancheProper.pdb
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\EntityFramework.dll
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\EntityFramework.xml
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.csprojResolveAssemblyReference.cache
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmAccueil.resources
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmGestionEpis.resources
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmGestionStock.resources
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.Properties.Resources.resources
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.csproj.GenerateResource.Cache
