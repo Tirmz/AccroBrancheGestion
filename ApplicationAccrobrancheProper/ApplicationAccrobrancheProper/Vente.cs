@@ -23,5 +23,18 @@ namespace ApplicationAccrobrancheProper
         public System.DateTime dateVente { get; set; }
     
         public virtual List<LignedeVente> LesLignesdeVentes { get; set; }
+
+        public float GetTotalHT
+        {
+            get
+            {
+                float THT = 0;
+                foreach (LignedeVente laligne in LesLignesdeVentes)
+                {
+                    THT += laligne.GetTotalHTLigneVente;
+                }
+                return (float)Math.Round(THT,2);
+            }
+        }
     }
 }

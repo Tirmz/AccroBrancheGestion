@@ -21,5 +21,23 @@ namespace ApplicationAccrobrancheProper
     
         public virtual Vente LaVente { get; set; }
         public virtual Produit LeProduit { get; set; }
+
+        public float GetTotalHTLigneVente
+        {
+            get { return (float)Math.Round((float)this.quantiteVente * LeProduit.prixProduitHT, 2);}
+        }
+        public DateTime GetDateVente
+        {
+            get { return LaVente.dateVente; }
+        }
+
+        public string GetNomProduit
+        {
+            get { return LeProduit.nomProduit; }
+        }
+        public float GetPrixUnitaire
+        {
+            get { return (float)Math.Round((float)LeProduit.prixProduitHT, 2); }
+        }
     }
 }

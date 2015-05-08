@@ -65,6 +65,24 @@
     <Compile Include="FrmAccueil.Designer.cs">
       <DependentUpon>FrmAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChiffreAffaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChiffreAffaire.Designer.cs">
+      <DependentUpon>FrmChiffreAffaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfigs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfigs.Designer.cs">
+      <DependentUpon>FrmConfigs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetailsFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailsFournisseur.Designer.cs">
+      <DependentUpon>FrmDetailsFournisseur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionEpis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,12 @@
     </Compile>
     <Compile Include="FrmGestionStock.Designer.cs">
       <DependentUpon>FrmGestionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewPanelConfProduits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewPanelConfProduits.Designer.cs">
+      <DependentUpon>FrmViewPanelConfProduits.cs</DependentUpon>
     </Compile>
     <Compile Include="LignedeVente.cs">
       <DependentUpon>Modele.tt</DependentUpon>
@@ -106,11 +130,23 @@
     <EmbeddedResource Include="FrmAccueil.resx">
       <DependentUpon>FrmAccueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmChiffreAffaire.resx">
+      <DependentUpon>FrmChiffreAffaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfigs.resx">
+      <DependentUpon>FrmConfigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailsFournisseur.resx">
+      <DependentUpon>FrmDetailsFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionEpis.resx">
       <DependentUpon>FrmGestionEpis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionStock.resx">
       <DependentUpon>FrmGestionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewPanelConfProduits.resx">
+      <DependentUpon>FrmViewPanelConfProduits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

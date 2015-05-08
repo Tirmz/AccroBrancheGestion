@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1208, 512);
             this.Name = "FrmGestionEpis";
-            this.Text = "FrmGestionEpis";
+            this.Text = "Gestion des Epi\'s";
             this.ResumeLayout(false);
 
         }

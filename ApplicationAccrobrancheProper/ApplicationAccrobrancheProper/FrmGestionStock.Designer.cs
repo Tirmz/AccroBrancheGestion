@@ -47,7 +47,11 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.produitBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.produitDataGridView = new System.Windows.Forms.DataGridView();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.GetPrixTCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lb_rappelStock = new System.Windows.Forms.Label();
+            this.bt_watchEarnings = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbx_productinalert = new System.Windows.Forms.CheckBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +60,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GetPrixTCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
             this.bn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitDataGridView)).BeginInit();
@@ -76,11 +80,11 @@
             // 
             // bt_goDoSale
             // 
-            this.bt_goDoSale.Location = new System.Drawing.Point(12, 131);
+            this.bt_goDoSale.Location = new System.Drawing.Point(12, 45);
             this.bt_goDoSale.Name = "bt_goDoSale";
             this.bt_goDoSale.Size = new System.Drawing.Size(244, 197);
             this.bt_goDoSale.TabIndex = 1;
-            this.bt_goDoSale.Text = "VENTE";
+            this.bt_goDoSale.Text = "FAIRE UNE VENTE";
             this.bt_goDoSale.UseVisualStyleBackColor = true;
             // 
             // bn
@@ -137,6 +141,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Supprimer";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -201,11 +206,11 @@
             // produitBindingNavigatorSaveItem
             // 
             this.produitBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.produitBindingNavigatorSaveItem.Enabled = false;
             this.produitBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("produitBindingNavigatorSaveItem.Image")));
             this.produitBindingNavigatorSaveItem.Name = "produitBindingNavigatorSaveItem";
             this.produitBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.produitBindingNavigatorSaveItem.Text = "Enregistrer les données";
+            this.produitBindingNavigatorSaveItem.Click += new System.EventHandler(this.produitBindingNavigatorSaveItem_Click);
             // 
             // produitDataGridView
             // 
@@ -225,22 +230,68 @@
             this.GetPrixTCC});
             this.produitDataGridView.DataSource = this.bs;
             this.produitDataGridView.GridColor = System.Drawing.Color.Red;
-            this.produitDataGridView.Location = new System.Drawing.Point(282, 106);
+            this.produitDataGridView.Location = new System.Drawing.Point(276, 74);
             this.produitDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.produitDataGridView.Name = "produitDataGridView";
             this.produitDataGridView.RowHeadersWidth = 50;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Small", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Adobe Caslon Pro", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
             this.produitDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.produitDataGridView.RowTemplate.Height = 30;
-            this.produitDataGridView.Size = new System.Drawing.Size(1110, 313);
+            this.produitDataGridView.Size = new System.Drawing.Size(1093, 531);
             this.produitDataGridView.TabIndex = 3;
+            this.produitDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.produitDataGridView_CellContentClick);
             // 
-            // bs
+            // GetPrixTCC
             // 
-            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
+            this.GetPrixTCC.DataPropertyName = "GetPrixTCC";
+            this.GetPrixTCC.HeaderText = "Prix TTC";
+            this.GetPrixTCC.Name = "GetPrixTCC";
+            this.GetPrixTCC.ReadOnly = true;
+            // 
+            // lb_rappelStock
+            // 
+            this.lb_rappelStock.AutoSize = true;
+            this.lb_rappelStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_rappelStock.ForeColor = System.Drawing.Color.Red;
+            this.lb_rappelStock.Location = new System.Drawing.Point(271, 618);
+            this.lb_rappelStock.Name = "lb_rappelStock";
+            this.lb_rappelStock.Size = new System.Drawing.Size(127, 25);
+            this.lb_rappelStock.TabIndex = 4;
+            this.lb_rappelStock.Text = "Stock Alert";
+            this.lb_rappelStock.Visible = false;
+            // 
+            // bt_watchEarnings
+            // 
+            this.bt_watchEarnings.Location = new System.Drawing.Point(12, 248);
+            this.bt_watchEarnings.Name = "bt_watchEarnings";
+            this.bt_watchEarnings.Size = new System.Drawing.Size(244, 197);
+            this.bt_watchEarnings.TabIndex = 5;
+            this.bt_watchEarnings.Text = "LES CHIFFRES D\'AFFAIRE";
+            this.bt_watchEarnings.UseVisualStyleBackColor = true;
+            this.bt_watchEarnings.Click += new System.EventHandler(this.bt_watchEarnings_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(244, 197);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "REGLAGES";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbx_productinalert
+            // 
+            this.cbx_productinalert.AutoSize = true;
+            this.cbx_productinalert.Location = new System.Drawing.Point(276, 50);
+            this.cbx_productinalert.Name = "cbx_productinalert";
+            this.cbx_productinalert.Size = new System.Drawing.Size(109, 17);
+            this.cbx_productinalert.TabIndex = 7;
+            this.cbx_productinalert.Text = "Produits en Alerte";
+            this.cbx_productinalert.UseVisualStyleBackColor = true;
+            this.cbx_productinalert.CheckedChanged += new System.EventHandler(this.cbx_productinalert_CheckedChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -302,26 +353,32 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Fournisseur";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.Width = 86;
             // 
-            // GetPrixTCC
+            // bs
             // 
-            this.GetPrixTCC.DataPropertyName = "GetPrixTCC";
-            this.GetPrixTCC.HeaderText = "Prix TTC";
-            this.GetPrixTCC.Name = "GetPrixTCC";
-            this.GetPrixTCC.ReadOnly = true;
+            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
+            this.bs.CurrentChanged += new System.EventHandler(this.bs_CurrentChanged);
             // 
             // FrmGestionStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1484, 661);
+            this.Controls.Add(this.cbx_productinalert);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_watchEarnings);
+            this.Controls.Add(this.lb_rappelStock);
             this.Controls.Add(this.produitDataGridView);
             this.Controls.Add(this.bn);
             this.Controls.Add(this.bt_goDoSale);
             this.Controls.Add(this.lb_titleGestionStock);
             this.Name = "FrmGestionStock";
-            this.Text = "FrmGestionStock";
+            this.Text = "Gestion du Stock";
+            this.Load += new System.EventHandler(this.FrmGestionStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
             this.bn.ResumeLayout(false);
             this.bn.PerformLayout();
@@ -351,6 +408,7 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton produitBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView produitDataGridView;
+        private System.Windows.Forms.Label lb_rappelStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -359,7 +417,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn GetPrixTCC;
+        private System.Windows.Forms.Button bt_watchEarnings;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbx_productinalert;
     }
 }

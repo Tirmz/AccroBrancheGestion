@@ -22,13 +22,24 @@ namespace ApplicationAccrobrancheProper
         private void bt_GoGestionCaisse_Click(object sender, EventArgs e)
         {
             FrmGestionStock gestionstock = new FrmGestionStock(bd);
-            gestionstock.ShowDialog();
+            gestionstock.Show();
         }
 
         private void bt_GoGestionEpis_Click(object sender, EventArgs e)
         {
             FrmGestionEpis gestionepi = new FrmGestionEpis();
-            gestionepi.ShowDialog();
+            gestionepi.Show();
+        }
+
+        private void FrmAccueil_Load(object sender, EventArgs e)
+        {
+            bt_majproduits.Visible = false;
+        }
+
+        private void bt_majproduits_Click(object sender, EventArgs e)
+        {
+            FrmViewPanelConfProduits frm = new FrmViewPanelConfProduits(bd);
+            frm.Show();
         }
     }
 }
