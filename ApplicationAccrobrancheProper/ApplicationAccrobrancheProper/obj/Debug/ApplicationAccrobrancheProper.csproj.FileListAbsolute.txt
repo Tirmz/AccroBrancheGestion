@@ -30,3 +30,4 @@ C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobr
 C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmConfigs.resources
 C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmViewPanelConfProduits.resources
 C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmChiffreAffaire.resources
+C:\Users\Tristan\Desktop\COURS B2\Projets\AccroBrancheGestion\ApplicationAccrobrancheProper\ApplicationAccrobrancheProper\obj\Debug\ApplicationAccrobrancheProper.FrmVente.resources

@@ -115,5 +115,12 @@ namespace ApplicationAccrobrancheProper
                 }
             }
         }
+
+        private void bt_goDoSale_Click(object sender, EventArgs e)
+        {
+            FrmVente frm = new FrmVente(bd);
+            frm.Show();
+        }
+
     }
 }

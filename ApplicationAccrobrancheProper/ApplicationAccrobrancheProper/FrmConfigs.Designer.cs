@@ -37,10 +37,6 @@
             System.Windows.Forms.Label idFournisseurLabel;
             System.Windows.Forms.Label idCategorieLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfigs));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fournisseursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.catégoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bnProduits = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bsProduits = new System.Windows.Forms.BindingSource(this.components);
@@ -70,7 +66,6 @@
             idProduitLabel = new System.Windows.Forms.Label();
             idFournisseurLabel = new System.Windows.Forms.Label();
             idCategorieLabel = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnProduits)).BeginInit();
             this.bnProduits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsProduits)).BeginInit();
@@ -154,37 +149,6 @@
             idCategorieLabel.TabIndex = 6;
             idCategorieLabel.Text = "ID Catégorie";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.produitsToolStripMenuItem,
-            this.fournisseursToolStripMenuItem,
-            this.catégoriesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1916, 25);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // produitsToolStripMenuItem
-            // 
-            this.produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
-            this.produitsToolStripMenuItem.Size = new System.Drawing.Size(63, 19);
-            this.produitsToolStripMenuItem.Text = "Produits";
-            // 
-            // fournisseursToolStripMenuItem
-            // 
-            this.fournisseursToolStripMenuItem.Name = "fournisseursToolStripMenuItem";
-            this.fournisseursToolStripMenuItem.Size = new System.Drawing.Size(85, 19);
-            this.fournisseursToolStripMenuItem.Text = "Fournisseurs";
-            // 
-            // catégoriesToolStripMenuItem
-            // 
-            this.catégoriesToolStripMenuItem.Name = "catégoriesToolStripMenuItem";
-            this.catégoriesToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
-            this.catégoriesToolStripMenuItem.Text = "Catégories";
-            // 
             // bnProduits
             // 
             this.bnProduits.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -204,7 +168,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.produitBindingNavigatorSaveItem});
-            this.bnProduits.Location = new System.Drawing.Point(0, 25);
+            this.bnProduits.Location = new System.Drawing.Point(0, 0);
             this.bnProduits.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnProduits.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bnProduits.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -409,15 +373,11 @@
             this.ClientSize = new System.Drawing.Size(1916, 1020);
             this.Controls.Add(this.bnProduits);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmConfigs";
             this.Text = "Réglages Logiciel";
             this.Load += new System.EventHandler(this.FrmConfigs_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bnProduits)).EndInit();
             this.bnProduits.ResumeLayout(false);
             this.bnProduits.PerformLayout();
@@ -431,10 +391,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem produitsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fournisseursToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem catégoriesToolStripMenuItem;
         private System.Windows.Forms.BindingSource bsProduits;
         private System.Windows.Forms.BindingNavigator bnProduits;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;

@@ -34,28 +34,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_ventes = new System.Windows.Forms.DataGridView();
-            this.detailsvente = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.bt_print = new System.Windows.Forms.Button();
             this.bslignesvente = new System.Windows.Forms.BindingSource(this.components);
             this.lesLignesdeVentesDataGridView = new System.Windows.Forms.DataGridView();
-            this.GetPrixUnitaireHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GetPrixUnitaireHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ventes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bslignesvente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lesLignesdeVentesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
             // 
             // dg_ventes
@@ -77,8 +76,7 @@
             this.dg_ventes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.detailsvente});
+            this.dataGridViewTextBoxColumn3});
             this.dg_ventes.DataSource = this.bs;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -89,7 +87,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_ventes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_ventes.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dg_ventes.Location = new System.Drawing.Point(27, 47);
+            this.dg_ventes.Location = new System.Drawing.Point(360, 12);
             this.dg_ventes.Name = "dg_ventes";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -105,17 +103,12 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuBar;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
             this.dg_ventes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_ventes.Size = new System.Drawing.Size(426, 323);
+            this.dg_ventes.Size = new System.Drawing.Size(426, 241);
             this.dg_ventes.TabIndex = 1;
             // 
-            // detailsvente
+            // bs
             // 
-            this.detailsvente.DataPropertyName = "idVente";
-            this.detailsvente.HeaderText = "Détails de la Vente";
-            this.detailsvente.Name = "detailsvente";
-            this.detailsvente.Text = "Détails";
-            this.detailsvente.UseColumnTextForButtonValue = true;
-            this.detailsvente.Width = 67;
+            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Vente);
             // 
             // label1
             // 
@@ -135,11 +128,11 @@
             // bt_print
             // 
             this.bt_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_print.Location = new System.Drawing.Point(459, 74);
+            this.bt_print.Location = new System.Drawing.Point(12, 12);
             this.bt_print.Name = "bt_print";
             this.bt_print.Size = new System.Drawing.Size(159, 70);
             this.bt_print.TabIndex = 3;
-            this.bt_print.Text = "Imprimer";
+            this.bt_print.Text = "Imprimer les ventes";
             this.bt_print.UseVisualStyleBackColor = true;
             this.bt_print.Click += new System.EventHandler(this.bt_print_Click);
             // 
@@ -163,17 +156,10 @@
             this.GetPrixUnitaireHT,
             this.dataGridViewTextBoxColumn10});
             this.lesLignesdeVentesDataGridView.DataSource = this.bslignesvente;
-            this.lesLignesdeVentesDataGridView.Location = new System.Drawing.Point(459, 150);
+            this.lesLignesdeVentesDataGridView.Location = new System.Drawing.Point(169, 259);
             this.lesLignesdeVentesDataGridView.Name = "lesLignesdeVentesDataGridView";
-            this.lesLignesdeVentesDataGridView.Size = new System.Drawing.Size(828, 220);
+            this.lesLignesdeVentesDataGridView.Size = new System.Drawing.Size(828, 113);
             this.lesLignesdeVentesDataGridView.TabIndex = 3;
-            // 
-            // GetPrixUnitaireHT
-            // 
-            this.GetPrixUnitaireHT.DataPropertyName = "GetPrixUnitaire";
-            this.GetPrixUnitaireHT.HeaderText = "Prix Unitaire HT";
-            this.GetPrixUnitaireHT.Name = "GetPrixUnitaireHT";
-            this.GetPrixUnitaireHT.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -216,16 +202,19 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
+            // GetPrixUnitaireHT
+            // 
+            this.GetPrixUnitaireHT.DataPropertyName = "GetPrixUnitaire";
+            this.GetPrixUnitaireHT.HeaderText = "Prix Unitaire HT";
+            this.GetPrixUnitaireHT.Name = "GetPrixUnitaireHT";
+            this.GetPrixUnitaireHT.ReadOnly = true;
+            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "GetTotalHTLigneVente";
             this.dataGridViewTextBoxColumn10.HeaderText = "Montant Total HT";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Vente);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -263,9 +252,9 @@
             this.Text = "Chiffre d\'Affaire";
             this.Load += new System.EventHandler(this.FrmChiffreAffaire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_ventes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bslignesvente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lesLignesdeVentesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,10 +265,6 @@
         private System.Windows.Forms.BindingSource bs;
         private System.Windows.Forms.DataGridView dg_ventes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn detailsvente;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button bt_print;
         private System.Windows.Forms.BindingSource bslignesvente;
@@ -292,6 +277,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn GetPrixUnitaireHT;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 
 
     }
