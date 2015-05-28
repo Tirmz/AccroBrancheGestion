@@ -33,12 +33,13 @@
             System.Windows.Forms.Label idFournisseurLabel;
             System.Windows.Forms.Label nomFournisseurLabel;
             System.Windows.Forms.Label villeFournisseurLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetailsFournisseur));
             this.cpFournisseurTextBox = new System.Windows.Forms.TextBox();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.idFournisseurTextBox = new System.Windows.Forms.TextBox();
             this.nomFournisseurTextBox = new System.Windows.Forms.TextBox();
             this.villeFournisseurTextBox = new System.Windows.Forms.TextBox();
             this.nomProduitLabel1 = new System.Windows.Forms.Label();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             cpFournisseurLabel = new System.Windows.Forms.Label();
             idFournisseurLabel = new System.Windows.Forms.Label();
             nomFournisseurLabel = new System.Windows.Forms.Label();
@@ -96,6 +97,10 @@
             this.cpFournisseurTextBox.Size = new System.Drawing.Size(61, 20);
             this.cpFournisseurTextBox.TabIndex = 2;
             // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
+            // 
             // idFournisseurTextBox
             // 
             this.idFournisseurTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -138,10 +143,6 @@
             this.nomProduitLabel1.Text = "label2";
             this.nomProduitLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
-            // 
             // FrmDetailsFournisseur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +158,7 @@
             this.Controls.Add(this.nomFournisseurTextBox);
             this.Controls.Add(villeFournisseurLabel);
             this.Controls.Add(this.villeFournisseurTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDetailsFournisseur";
             this.Text = "Fiche Fournisseur";
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();

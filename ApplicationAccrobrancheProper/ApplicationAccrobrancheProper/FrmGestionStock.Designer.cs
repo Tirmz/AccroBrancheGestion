@@ -60,7 +60,7 @@
             this.GetPrixTCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lb_rappelStock = new System.Windows.Forms.Label();
             this.bt_watchEarnings = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_goConfigs = new System.Windows.Forms.Button();
             this.cbx_productinalert = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
             this.bn.SuspendLayout();
@@ -342,15 +342,15 @@
             this.bt_watchEarnings.UseVisualStyleBackColor = true;
             this.bt_watchEarnings.Click += new System.EventHandler(this.bt_watchEarnings_Click);
             // 
-            // button1
+            // bt_goConfigs
             // 
-            this.button1.Location = new System.Drawing.Point(12, 451);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 197);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "REGLAGES";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bt_goConfigs.Location = new System.Drawing.Point(12, 451);
+            this.bt_goConfigs.Name = "bt_goConfigs";
+            this.bt_goConfigs.Size = new System.Drawing.Size(244, 197);
+            this.bt_goConfigs.TabIndex = 6;
+            this.bt_goConfigs.Text = "REGLAGES";
+            this.bt_goConfigs.UseVisualStyleBackColor = true;
+            this.bt_goConfigs.Click += new System.EventHandler(this.bt_goConfigs_Click);
             // 
             // cbx_productinalert
             // 
@@ -370,13 +370,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1484, 661);
             this.Controls.Add(this.cbx_productinalert);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_goConfigs);
             this.Controls.Add(this.bt_watchEarnings);
             this.Controls.Add(this.lb_rappelStock);
             this.Controls.Add(this.produitDataGridView);
             this.Controls.Add(this.bn);
             this.Controls.Add(this.bt_goDoSale);
             this.Controls.Add(this.lb_titleGestionStock);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmGestionStock";
             this.Text = "Gestion du Stock";
             this.Load += new System.EventHandler(this.FrmGestionStock_Load);
@@ -421,7 +422,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn GetPrixTCC;
         private System.Windows.Forms.Button bt_watchEarnings;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_goConfigs;
         private System.Windows.Forms.CheckBox cbx_productinalert;
     }
 }

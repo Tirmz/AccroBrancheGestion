@@ -24,6 +24,9 @@ namespace ApplicationAccrobrancheProper
             setDisplay();
         }
 
+        /// <summary>
+        /// Permet la mise en place des éléments dynamiques du formulaire
+        /// </summary>
         private void setDisplay()
         {
             fillcbx(cbx_nameboisson, 1);
@@ -32,6 +35,9 @@ namespace ApplicationAccrobrancheProper
             fillcbx(cbx_nameEquipments, 4);
         }
 
+        /// <summary>
+        /// Permet de remplir une combobox en spécifiant la catégorie du produit.
+        /// </summary>
         private void fillcbx(ComboBox cbx, int categorie)
         {
             var fillcombobox = (from p in bd.Produit
@@ -39,6 +45,12 @@ namespace ApplicationAccrobrancheProper
                                 select p);
             cbx.DataSource = fillcombobox.ToList();
             cbx.DisplayMember = "nomProduit";
+            cbx.ValueMember = "idProduit";
+        }
+
+        private void bt_validateboisson_Click(object sender, EventArgs e)
+        {
+            lb_recapvente.Text = cbx_nameboisson.SelectedValue.ToString();
         }
     }
 }

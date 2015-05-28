@@ -39,7 +39,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfigs));
             this.bnProduits = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bsProduits = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -59,6 +58,7 @@
             this.idFournisseurTextBox = new System.Windows.Forms.TextBox();
             this.idCategorieTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bsProduits = new System.Windows.Forms.BindingSource(this.components);
             stockAlertLabel = new System.Windows.Forms.Label();
             quantiteStockProduitLabel = new System.Windows.Forms.Label();
             prixProduitHTLabel = new System.Windows.Forms.Label();
@@ -68,8 +68,8 @@
             idCategorieLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bnProduits)).BeginInit();
             this.bnProduits.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsProduits)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProduits)).BeginInit();
             this.SuspendLayout();
             // 
             // stockAlertLabel
@@ -188,11 +188,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
-            // 
-            // bsProduits
-            // 
-            this.bsProduits.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
-            this.bsProduits.CurrentChanged += new System.EventHandler(this.bsProduits_CurrentChanged);
             // 
             // bindingNavigatorCountItem
             // 
@@ -365,6 +360,11 @@
             this.panel1.Size = new System.Drawing.Size(421, 275);
             this.panel1.TabIndex = 4;
             // 
+            // bsProduits
+            // 
+            this.bsProduits.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
+            this.bsProduits.CurrentChanged += new System.EventHandler(this.bsProduits_CurrentChanged);
+            // 
             // FrmConfigs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -374,6 +374,7 @@
             this.Controls.Add(this.bnProduits);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmConfigs";
             this.Text = "Réglages Logiciel";
@@ -381,9 +382,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bnProduits)).EndInit();
             this.bnProduits.ResumeLayout(false);
             this.bnProduits.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsProduits)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProduits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

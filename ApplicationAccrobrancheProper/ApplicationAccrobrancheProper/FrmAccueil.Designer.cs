@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccueil));
             this.bt_GoGestionCaisse = new System.Windows.Forms.Button();
             this.bt_GoGestionEpis = new System.Windows.Forms.Button();
             this.bt_majproduits = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.Controls.Add(this.bt_majproduits);
             this.Controls.Add(this.bt_GoGestionEpis);
             this.Controls.Add(this.bt_GoGestionCaisse);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAccueil";
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.FrmAccueil_Load);

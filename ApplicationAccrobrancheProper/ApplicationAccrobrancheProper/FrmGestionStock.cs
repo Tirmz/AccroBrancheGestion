@@ -20,6 +20,9 @@ namespace ApplicationAccrobrancheProper
             bs.DataSource = bd.Produit.ToList();
         }
 
+        /// <summary>
+        /// Fonction permettant de gèrer les sauvegardes, et sauvegardes après suppressions
+        /// </summary>
         private void produitBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             if (bs.Current != null)
@@ -81,6 +84,9 @@ namespace ApplicationAccrobrancheProper
             setMessageEtatStock();
         }
 
+        /// <summary>
+        /// Fonction permettant de renvoyer les détails du fournisseurs d'un produit (affiche un nouveau formulaire).
+        /// </summary>
         private void produitDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (produitDataGridView.Columns[e.ColumnIndex].Name == "dataGridViewTextBoxColumn9")
@@ -93,18 +99,18 @@ namespace ApplicationAccrobrancheProper
                 }
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmConfigs frm = new FrmConfigs(bd);
-            frm.Show();
-        }
-
+        /// <summary>
+        /// Ouvre le formulaire du Chiffre d'affaire et des ventes effectuées.
+        /// </summary>
         private void bt_watchEarnings_Click(object sender, EventArgs e)
         {
             FrmChiffreAffaire frm = new FrmChiffreAffaire(bd);
             frm.Show();
         }
-
+        
+        /// <summary>
+        /// Permet d'afficher seulement les produits proches de la rupture de stock.
+        /// </summary>
         private void cbx_productinalert_CheckedChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in produitDataGridView.Rows)
@@ -116,9 +122,20 @@ namespace ApplicationAccrobrancheProper
             }
         }
 
+        /// <summary>
+        /// Ouvre le formulaire permettant d'effectuer une vente.
+        /// </summary>
         private void bt_goDoSale_Click(object sender, EventArgs e)
         {
             FrmVente frm = new FrmVente(bd);
+            frm.Show();
+        }
+        /// <summary>
+        /// Ouvre le formulaire permettant de configurer les Produits, fournisseurs, catégorie (Méthodes CRUD).
+        /// </summary>
+        private void bt_goConfigs_Click(object sender, EventArgs e)
+        {
+            FrmConfigs frm = new FrmConfigs(bd);
             frm.Show();
         }
 
