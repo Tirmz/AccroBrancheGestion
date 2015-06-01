@@ -135,7 +135,7 @@ namespace ApplicationAccrobrancheProper
         /// </summary>
         private void bt_goConfigs_Click(object sender, EventArgs e)
         {
-            FrmConfigs frm = new FrmConfigs(bd);
+            Frmcrud frm = new Frmcrud(bd);
             frm.Show();
         }
 

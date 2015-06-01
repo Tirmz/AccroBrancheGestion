@@ -28,7 +28,12 @@ namespace ApplicationAccrobrancheProper
         }
         public DateTime GetDateVente
         {
-            get { return LaVente.dateVente; }
+            get
+            {
+                if (LaVente == null)
+                    return DateTime.Now;
+                return LaVente.dateVente; 
+            }
         }
 
         public string GetNomProduit
