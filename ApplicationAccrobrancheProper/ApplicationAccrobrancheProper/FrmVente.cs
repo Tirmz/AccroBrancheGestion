@@ -13,7 +13,7 @@ namespace ApplicationAccrobrancheProper
     public partial class FrmVente : Form
     {
         private Modele bd;
-        private BindingList<LignedeVente> listelignes = new BindingList<LignedeVente>();
+        private BindingList<LignedeVente> listelignes = new BindingList<LignedeVente>(); //Liste qui permet regrouper toutes les lignes de ventes.
         
         public FrmVente(Modele p_bd)
         {
@@ -43,7 +43,7 @@ namespace ApplicationAccrobrancheProper
         /// <summary>
         /// Permet de remplir une combobox en spécifiant la catégorie du produit.
         /// </summary>
-        private void fillcbx(ComboBox cbx, int categorie)
+        public void fillcbx(ComboBox cbx, int categorie)
         {
             // Requête LINQ permettant de lister les produits en fonction de la catégorie.
             var fillcombobox = (from p in bd.Produit
@@ -56,15 +56,48 @@ namespace ApplicationAccrobrancheProper
 
         private void bt_validateboisson_Click(object sender, EventArgs e)
         {
-           LignedeVente nouvelleligne = new LignedeVente();
-            nouvelleligne.idProduit = Convert.ToInt32(cbx_nameboisson.SelectedValue);
-            nouvelleligne.quantiteVente = Convert.ToInt32(num_boissons.Value);
-
-            nouvelleligne.LeProduit = (from p in bd.Produit
-                                       where p.idProduit == nouvelleligne.idProduit
-                                       select p).Single();
-            listelignes.Add(nouvelleligne);
+            addProductType(cbx_nameboisson, num_boissons);
         }
+        private void bt_validategateau_Click(object sender, EventArgs e)
+        {
+            addProductType(cbx_namegateau, num_gateaux);
+        }
+        private void bt_validateglace_Click(object sender, EventArgs e)
+        {
+            addProductType(cbx_nameglaces, num_glaces);
+        }
+        private void bt_validateequipments_Click(object sender, EventArgs e)
+        {
+            addProductType(cbx_nameEquipments, num_equipments);
+        }
+
+        /// <summary>
+        /// Permet d'ajouter un produit au dg_recapVente (listelignes), prends en paramètre un combobox et un numericUpDown.
+        /// </summary>
+        private void addProductType(ComboBox cbxproduit, NumericUpDown quantiteproduit)
+        {
+            if (quantiteproduit.Value != 0)
+            {
+                LignedeVente nouvelleligne = new LignedeVente();
+                nouvelleligne.idProduit = Convert.ToInt32(cbxproduit.SelectedValue);
+                nouvelleligne.quantiteVente = Convert.ToInt32(quantiteproduit.Value);
+
+                nouvelleligne.LeProduit = (from p in bd.Produit
+                                           where p.idProduit == nouvelleligne.idProduit
+                                           select p).Single();
+                listelignes.Add(nouvelleligne);
+                // remet les valeurs par defaut
+                cbxproduit.SelectedValue = 1;
+                quantiteproduit.Value = 0;
+            }
+            else
+            {
+                MessageBox.Show("Vous devez spécifier la quantité");
+            }
+        }
+        /// <summary>
+        /// Prépare l'ordre des colonnes, cache les colonnes inutiles, renomme les colonnes pour des noms plus clairs
+        /// </summary>
         private void setColumns()
         {
             dg_recapVente.Columns["idLignedeVente"].DisplayIndex = 0;
@@ -91,21 +124,32 @@ namespace ApplicationAccrobrancheProper
             dg_recapVente.Columns["GetTotalHTLigneVente"].HeaderText = "Total";
         }
 
+        /// <summary>
+        /// Créé une nouvelle vente et Ajoute les produits sélectionnées à la vente.
+        /// </summary>
         private void bt_validatevente_Click(object sender, EventArgs e)
         {
-            Vente lanouvellevente = new Vente();
-            lanouvellevente.dateVente = DateTime.Now;
-
-            bd.Vente.Add(lanouvellevente);
-            bd.SaveChanges();
-
-            foreach (LignedeVente ligne in listelignes)
+            if (listelignes.Count != 0) // Il ya des lignes de ventes dans la liste listelignes
             {
-                ligne.idVente = lanouvellevente.idVente;
-                bd.LignedeVente.Add(ligne);
-            }
-            bd.SaveChanges();
+                Vente lanouvellevente = new Vente();
+                lanouvellevente.dateVente = DateTime.Now;
 
+                bd.Vente.Add(lanouvellevente);
+                bd.SaveChanges();
+
+                foreach (LignedeVente ligne in listelignes)
+                {
+                    ligne.idVente = lanouvellevente.idVente;
+                    bd.LignedeVente.Add(ligne);
+                }
+                bd.SaveChanges();
+                MessageBox.Show("Vente Enregistrée");
+                listelignes.Clear();
+            }
+            else // Pas de ligne de ventes
+            {
+                MessageBox.Show("Le vente ne contient aucun produit");
+            }
         }
     }
 }

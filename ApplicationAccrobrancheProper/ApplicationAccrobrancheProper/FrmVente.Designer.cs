@@ -131,6 +131,7 @@
             this.bt_validateequipments.TabIndex = 15;
             this.bt_validateequipments.Text = "Ajouter";
             this.bt_validateequipments.UseVisualStyleBackColor = true;
+            this.bt_validateequipments.Click += new System.EventHandler(this.bt_validateequipments_Click);
             // 
             // bt_validateglace
             // 
@@ -140,6 +141,7 @@
             this.bt_validateglace.TabIndex = 14;
             this.bt_validateglace.Text = "Ajouter";
             this.bt_validateglace.UseVisualStyleBackColor = true;
+            this.bt_validateglace.Click += new System.EventHandler(this.bt_validateglace_Click);
             // 
             // bt_validategateau
             // 
@@ -149,6 +151,7 @@
             this.bt_validategateau.TabIndex = 13;
             this.bt_validategateau.Text = "Ajouter";
             this.bt_validategateau.UseVisualStyleBackColor = true;
+            this.bt_validategateau.Click += new System.EventHandler(this.bt_validategateau_Click);
             // 
             // bt_validateboisson
             // 

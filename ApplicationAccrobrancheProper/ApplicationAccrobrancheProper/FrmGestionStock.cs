@@ -113,12 +113,13 @@ namespace ApplicationAccrobrancheProper
         /// </summary>
         private void cbx_productinalert_CheckedChanged(object sender, EventArgs e)
         {
+
             foreach (DataGridViewRow row in produitDataGridView.Rows)
             {
-                if (row.DefaultCellStyle.BackColor != Color.Pink)
-                {
-                    row.Visible = false;
-                }
+                    if (row.DefaultCellStyle.BackColor != Color.Pink)
+                    {
+                        row.Visible = false;
+                    }
             }
         }
 
@@ -136,8 +137,10 @@ namespace ApplicationAccrobrancheProper
         private void bt_goConfigs_Click(object sender, EventArgs e)
         {
             Frmcrud frm = new Frmcrud(bd);
-            frm.Show();
+            frm.ShowDialog();
+            bs.DataSource = bd.Produit.ToList();
+            setRedStockAlert();
+            setMessageEtatStock();
         }
-
     }
 }

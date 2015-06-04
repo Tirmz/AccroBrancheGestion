@@ -62,6 +62,7 @@
             this.bt_watchEarnings = new System.Windows.Forms.Button();
             this.bt_goConfigs = new System.Windows.Forms.Button();
             this.cbx_productinalert = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bn)).BeginInit();
             this.bn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
@@ -363,12 +364,22 @@
             this.cbx_productinalert.UseVisualStyleBackColor = true;
             this.cbx_productinalert.CheckedChanged += new System.EventHandler(this.cbx_productinalert_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(721, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // FrmGestionStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1484, 661);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cbx_productinalert);
             this.Controls.Add(this.bt_goConfigs);
             this.Controls.Add(this.bt_watchEarnings);
@@ -424,5 +435,6 @@
         private System.Windows.Forms.Button bt_watchEarnings;
         private System.Windows.Forms.Button bt_goConfigs;
         private System.Windows.Forms.CheckBox cbx_productinalert;
+        private System.Windows.Forms.Label label1;
     }
 }
