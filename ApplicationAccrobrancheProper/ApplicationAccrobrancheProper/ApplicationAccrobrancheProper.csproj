@@ -65,6 +65,18 @@
     <Compile Include="FrmAccueil.Designer.cs">
       <DependentUpon>FrmAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAjoutCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutCategorie.Designer.cs">
+      <DependentUpon>FrmAjoutCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAjoutFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutFournisseur.Designer.cs">
+      <DependentUpon>FrmAjoutFournisseur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAjoutProduit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,17 +107,23 @@
     <Compile Include="FrmDetailsFournisseur.Designer.cs">
       <DependentUpon>FrmDetailsFournisseur.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGestionEpis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmGestionEpis.Designer.cs">
-      <DependentUpon>FrmGestionEpis.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmGestionStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGestionStock.Designer.cs">
       <DependentUpon>FrmGestionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifCategorie.Designer.cs">
+      <DependentUpon>FrmModifCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifFournisseur.Designer.cs">
+      <DependentUpon>FrmModifFournisseur.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmModifProduit.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,12 @@
     <EmbeddedResource Include="FrmAccueil.resx">
       <DependentUpon>FrmAccueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutCategorie.resx">
+      <DependentUpon>FrmAjoutCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutFournisseur.resx">
+      <DependentUpon>FrmAjoutFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutProduit.resx">
       <DependentUpon>FrmAjoutProduit.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +193,14 @@
     <EmbeddedResource Include="FrmDetailsFournisseur.resx">
       <DependentUpon>FrmDetailsFournisseur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGestionEpis.resx">
-      <DependentUpon>FrmGestionEpis.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionStock.resx">
       <DependentUpon>FrmGestionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifCategorie.resx">
+      <DependentUpon>FrmModifCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifFournisseur.resx">
+      <DependentUpon>FrmModifFournisseur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModifProduit.resx">
       <DependentUpon>FrmModifProduit.cs</DependentUpon>

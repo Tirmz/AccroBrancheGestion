@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace ApplicationAccrobrancheProper
 {
@@ -25,21 +26,26 @@ namespace ApplicationAccrobrancheProper
             gestionstock.Show();
         }
 
-        private void bt_GoGestionEpis_Click(object sender, EventArgs e)
+        private string getNameComputer()
         {
-            FrmGestionEpis gestionepi = new FrmGestionEpis();
-            gestionepi.Show();
+            string userHost = Dns.GetHostName();
+            return userHost;
+        }
+        
+        private string getIpAdresse()
+        {
+            string userIp = Dns.GetHostEntry(getNameComputer()).AddressList[1].ToString();
+            return userIp;
         }
 
         private void FrmAccueil_Load(object sender, EventArgs e)
         {
-            bt_majproduits.Visible = false;
+            setDisplay();
         }
 
-        private void bt_majproduits_Click(object sender, EventArgs e)
+        private void setDisplay()
         {
-            FrmViewPanelConfProduits frm = new FrmViewPanelConfProduits(bd);
-            frm.Show();
+            lb_nameComputer.Text = "Bienvenue " + getNameComputer();
         }
     }
 }

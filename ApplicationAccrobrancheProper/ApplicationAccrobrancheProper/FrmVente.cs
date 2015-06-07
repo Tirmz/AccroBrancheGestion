@@ -129,26 +129,33 @@ namespace ApplicationAccrobrancheProper
         /// </summary>
         private void bt_validatevente_Click(object sender, EventArgs e)
         {
-            if (listelignes.Count != 0) // Il ya des lignes de ventes dans la liste listelignes
+            try
             {
-                Vente lanouvellevente = new Vente();
-                lanouvellevente.dateVente = DateTime.Now;
-
-                bd.Vente.Add(lanouvellevente);
-                bd.SaveChanges();
-
-                foreach (LignedeVente ligne in listelignes)
+                if (listelignes.Count != 0) // Il ya des lignes de ventes dans la liste listelignes
                 {
-                    ligne.idVente = lanouvellevente.idVente;
-                    bd.LignedeVente.Add(ligne);
+                    Vente lanouvellevente = new Vente();
+                    lanouvellevente.dateVente = DateTime.Now;
+
+                    bd.Vente.Add(lanouvellevente);
+                    bd.SaveChanges();
+
+                    foreach (LignedeVente ligne in listelignes)
+                    {
+                        ligne.idVente = lanouvellevente.idVente;
+                        bd.LignedeVente.Add(ligne);
+                    }
+                    bd.SaveChanges();
+                    MessageBox.Show("Vente Enregistrée");
+                    listelignes.Clear();
                 }
-                bd.SaveChanges();
-                MessageBox.Show("Vente Enregistrée");
-                listelignes.Clear();
+                else // Pas de ligne de ventes
+                {
+                    MessageBox.Show("Le vente ne contient aucun produit");
+                }
             }
-            else // Pas de ligne de ventes
+            catch(Exception ex)
             {
-                MessageBox.Show("Le vente ne contient aucun produit");
+                MessageBox.Show("Stock pas assez Approvisionné");            
             }
         }
     }

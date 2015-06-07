@@ -60,5 +60,10 @@ namespace ApplicationAccrobrancheProper
             MessageBox.Show("Produit Ajouté");
             this.Close();
             }
+
+        private void FrmAjoutProduit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

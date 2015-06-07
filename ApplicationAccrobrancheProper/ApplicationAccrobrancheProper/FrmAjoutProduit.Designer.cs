@@ -211,6 +211,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAjoutProduit";
             this.Text = "Ajout Produit";
+            this.Load += new System.EventHandler(this.FrmAjoutProduit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_quantite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_alert)).EndInit();
             this.ResumeLayout(false);
