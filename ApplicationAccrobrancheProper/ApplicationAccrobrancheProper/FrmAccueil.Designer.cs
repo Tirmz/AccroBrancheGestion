@@ -35,20 +35,25 @@
             // 
             // bt_GoGestionCaisse
             // 
-            this.bt_GoGestionCaisse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_GoGestionCaisse.Location = new System.Drawing.Point(388, 145);
+            this.bt_GoGestionCaisse.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_GoGestionCaisse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_GoGestionCaisse.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_GoGestionCaisse.ForeColor = System.Drawing.SystemColors.Control;
+            this.bt_GoGestionCaisse.Location = new System.Drawing.Point(397, 156);
             this.bt_GoGestionCaisse.Name = "bt_GoGestionCaisse";
             this.bt_GoGestionCaisse.Size = new System.Drawing.Size(334, 208);
             this.bt_GoGestionCaisse.TabIndex = 0;
             this.bt_GoGestionCaisse.Text = "Gestion de Stock/Caisse";
-            this.bt_GoGestionCaisse.UseVisualStyleBackColor = true;
+            this.bt_GoGestionCaisse.UseVisualStyleBackColor = false;
             this.bt_GoGestionCaisse.Click += new System.EventHandler(this.bt_GoGestionCaisse_Click);
             // 
             // lb_nameComputer
             // 
             this.lb_nameComputer.AutoSize = true;
+            this.lb_nameComputer.BackColor = System.Drawing.Color.Transparent;
             this.lb_nameComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nameComputer.Location = new System.Drawing.Point(413, 95);
+            this.lb_nameComputer.ForeColor = System.Drawing.SystemColors.Control;
+            this.lb_nameComputer.Location = new System.Drawing.Point(440, 108);
             this.lb_nameComputer.Name = "lb_nameComputer";
             this.lb_nameComputer.Size = new System.Drawing.Size(108, 31);
             this.lb_nameComputer.TabIndex = 1;
@@ -59,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1208, 512);
             this.Controls.Add(this.lb_nameComputer);
             this.Controls.Add(this.bt_GoGestionCaisse);

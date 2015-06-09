@@ -35,15 +35,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChiffreAffaire));
             this.dg_ventes = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.bt_print = new System.Windows.Forms.Button();
             this.bslignesvente = new System.Windows.Forms.BindingSource(this.components);
             this.lesLignesdeVentesDataGridView = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +53,12 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GetPrixUnitaireHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getPrixTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ventes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bslignesvente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lesLignesdeVentesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
             // 
             // dg_ventes
@@ -63,7 +66,7 @@
             this.dg_ventes.AutoGenerateColumns = false;
             this.dg_ventes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dg_ventes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dg_ventes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dg_ventes.BackgroundColor = System.Drawing.Color.Teal;
             this.dg_ventes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -88,7 +91,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_ventes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_ventes.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dg_ventes.Location = new System.Drawing.Point(360, 12);
+            this.dg_ventes.Location = new System.Drawing.Point(469, 35);
             this.dg_ventes.Name = "dg_ventes";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -106,6 +109,87 @@
             this.dg_ventes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dg_ventes.Size = new System.Drawing.Size(426, 241);
             this.dg_ventes.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(12, 573);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 37);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // bt_print
+            // 
+            this.bt_print.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_print.ForeColor = System.Drawing.Color.White;
+            this.bt_print.Location = new System.Drawing.Point(917, 119);
+            this.bt_print.Name = "bt_print";
+            this.bt_print.Size = new System.Drawing.Size(159, 70);
+            this.bt_print.TabIndex = 3;
+            this.bt_print.Text = "Imprimer les ventes";
+            this.bt_print.UseVisualStyleBackColor = false;
+            this.bt_print.Click += new System.EventHandler(this.bt_print_Click);
+            // 
+            // bslignesvente
+            // 
+            this.bslignesvente.DataMember = "LesLignesdeVentes";
+            this.bslignesvente.DataSource = this.bs;
+            // 
+            // lesLignesdeVentesDataGridView
+            // 
+            this.lesLignesdeVentesDataGridView.AutoGenerateColumns = false;
+            this.lesLignesdeVentesDataGridView.BackgroundColor = System.Drawing.Color.Teal;
+            this.lesLignesdeVentesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lesLignesdeVentesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.GetPrixUnitaireHT,
+            this.getPrixTTC,
+            this.dataGridViewTextBoxColumn10});
+            this.lesLignesdeVentesDataGridView.DataSource = this.bslignesvente;
+            this.lesLignesdeVentesDataGridView.Location = new System.Drawing.Point(248, 318);
+            this.lesLignesdeVentesDataGridView.Name = "lesLignesdeVentesDataGridView";
+            this.lesLignesdeVentesDataGridView.Size = new System.Drawing.Size(828, 202);
+            this.lesLignesdeVentesDataGridView.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(615, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 29);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Vos Ventes :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(563, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Détails de vos Ventes :";
+            // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Vente);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -128,61 +212,6 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 69;
-            // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Vente);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(20, 505);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // bt_print
-            // 
-            this.bt_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_print.Location = new System.Drawing.Point(12, 12);
-            this.bt_print.Name = "bt_print";
-            this.bt_print.Size = new System.Drawing.Size(159, 70);
-            this.bt_print.TabIndex = 3;
-            this.bt_print.Text = "Imprimer les ventes";
-            this.bt_print.UseVisualStyleBackColor = true;
-            this.bt_print.Click += new System.EventHandler(this.bt_print_Click);
-            // 
-            // bslignesvente
-            // 
-            this.bslignesvente.DataMember = "LesLignesdeVentes";
-            this.bslignesvente.DataSource = this.bs;
-            // 
-            // lesLignesdeVentesDataGridView
-            // 
-            this.lesLignesdeVentesDataGridView.AutoGenerateColumns = false;
-            this.lesLignesdeVentesDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lesLignesdeVentesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lesLignesdeVentesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.GetPrixUnitaireHT,
-            this.dataGridViewTextBoxColumn10});
-            this.lesLignesdeVentesDataGridView.DataSource = this.bslignesvente;
-            this.lesLignesdeVentesDataGridView.Location = new System.Drawing.Point(169, 259);
-            this.lesLignesdeVentesDataGridView.Name = "lesLignesdeVentesDataGridView";
-            this.lesLignesdeVentesDataGridView.Size = new System.Drawing.Size(828, 113);
-            this.lesLignesdeVentesDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -214,14 +243,14 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "GetDateVente";
-            this.dataGridViewTextBoxColumn8.HeaderText = "LaVente";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Date";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "GetNomProduit";
-            this.dataGridViewTextBoxColumn9.HeaderText = "LeProduit";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Produit";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
@@ -231,6 +260,13 @@
             this.GetPrixUnitaireHT.HeaderText = "Prix Unitaire HT";
             this.GetPrixUnitaireHT.Name = "GetPrixUnitaireHT";
             this.GetPrixUnitaireHT.ReadOnly = true;
+            // 
+            // getPrixTTC
+            // 
+            this.getPrixTTC.DataPropertyName = "getPrixTTC";
+            this.getPrixTTC.HeaderText = "Prix Unitaire TTC";
+            this.getPrixTTC.Name = "getPrixTTC";
+            this.getPrixTTC.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -243,8 +279,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1484, 661);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lesLignesdeVentesDataGridView);
             this.Controls.Add(this.bt_print);
             this.Controls.Add(this.label1);
@@ -254,9 +292,9 @@
             this.Text = "Chiffre d\'Affaire";
             this.Load += new System.EventHandler(this.FrmChiffreAffaire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_ventes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bslignesvente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lesLignesdeVentesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,6 +309,11 @@
         private System.Windows.Forms.Button bt_print;
         private System.Windows.Forms.BindingSource bslignesvente;
         private System.Windows.Forms.DataGridView lesLignesdeVentesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -278,10 +321,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn GetPrixUnitaireHT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn getPrixTTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 
 
     }

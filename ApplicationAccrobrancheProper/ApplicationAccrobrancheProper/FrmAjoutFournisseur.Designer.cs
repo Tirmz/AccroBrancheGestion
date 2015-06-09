@@ -40,7 +40,9 @@
             // lb_namefour
             // 
             this.lb_namefour.AutoSize = true;
+            this.lb_namefour.BackColor = System.Drawing.Color.Transparent;
             this.lb_namefour.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_namefour.ForeColor = System.Drawing.Color.White;
             this.lb_namefour.Location = new System.Drawing.Point(12, 43);
             this.lb_namefour.Name = "lb_namefour";
             this.lb_namefour.Size = new System.Drawing.Size(77, 29);
@@ -50,7 +52,9 @@
             // lb_villefour
             // 
             this.lb_villefour.AutoSize = true;
+            this.lb_villefour.BackColor = System.Drawing.Color.Transparent;
             this.lb_villefour.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_villefour.ForeColor = System.Drawing.Color.White;
             this.lb_villefour.Location = new System.Drawing.Point(12, 91);
             this.lb_villefour.Name = "lb_villefour";
             this.lb_villefour.Size = new System.Drawing.Size(78, 29);
@@ -60,7 +64,9 @@
             // lb_cpfour
             // 
             this.lb_cpfour.AutoSize = true;
+            this.lb_cpfour.BackColor = System.Drawing.Color.Transparent;
             this.lb_cpfour.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cpfour.ForeColor = System.Drawing.Color.White;
             this.lb_cpfour.Location = new System.Drawing.Point(12, 135);
             this.lb_cpfour.Name = "lb_cpfour";
             this.lb_cpfour.Size = new System.Drawing.Size(157, 29);
@@ -93,18 +99,23 @@
             // 
             // bt_validateAjout
             // 
-            this.bt_validateAjout.Location = new System.Drawing.Point(119, 182);
+            this.bt_validateAjout.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateAjout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_validateAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validateAjout.ForeColor = System.Drawing.Color.White;
+            this.bt_validateAjout.Location = new System.Drawing.Point(105, 173);
             this.bt_validateAjout.Name = "bt_validateAjout";
-            this.bt_validateAjout.Size = new System.Drawing.Size(85, 29);
+            this.bt_validateAjout.Size = new System.Drawing.Size(99, 38);
             this.bt_validateAjout.TabIndex = 6;
             this.bt_validateAjout.Text = "Valider";
-            this.bt_validateAjout.UseVisualStyleBackColor = true;
+            this.bt_validateAjout.UseVisualStyleBackColor = false;
             this.bt_validateAjout.Click += new System.EventHandler(this.bt_validateAjout_Click);
             // 
             // FrmAjoutFournisseur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(324, 217);
             this.Controls.Add(this.bt_validateAjout);
             this.Controls.Add(this.txt_cpfour);
@@ -114,7 +125,7 @@
             this.Controls.Add(this.lb_villefour);
             this.Controls.Add(this.lb_namefour);
             this.Name = "FrmAjoutFournisseur";
-            this.Text = "FrmAjoutFournisseur";
+            this.Text = "Ajouter un Fournisseur";
             this.ResumeLayout(false);
             this.PerformLayout();
 

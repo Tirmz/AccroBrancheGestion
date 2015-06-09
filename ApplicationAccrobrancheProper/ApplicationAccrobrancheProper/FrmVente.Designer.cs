@@ -99,6 +99,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.bt_validateequipments);
             this.groupBox1.Controls.Add(this.bt_validateglace);
             this.groupBox1.Controls.Add(this.bt_validategateau);
@@ -116,6 +117,7 @@
             this.groupBox1.Controls.Add(this.cbx_namegateau);
             this.groupBox1.Controls.Add(this.cbx_nameglaces);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1286, 190);
@@ -125,42 +127,50 @@
             // 
             // bt_validateequipments
             // 
+            this.bt_validateequipments.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateequipments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_validateequipments.Location = new System.Drawing.Point(1063, 148);
             this.bt_validateequipments.Name = "bt_validateequipments";
             this.bt_validateequipments.Size = new System.Drawing.Size(102, 35);
             this.bt_validateequipments.TabIndex = 15;
             this.bt_validateequipments.Text = "Ajouter";
-            this.bt_validateequipments.UseVisualStyleBackColor = true;
+            this.bt_validateequipments.UseVisualStyleBackColor = false;
             this.bt_validateequipments.Click += new System.EventHandler(this.bt_validateequipments_Click);
             // 
             // bt_validateglace
             // 
+            this.bt_validateglace.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateglace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_validateglace.Location = new System.Drawing.Point(723, 148);
             this.bt_validateglace.Name = "bt_validateglace";
             this.bt_validateglace.Size = new System.Drawing.Size(102, 35);
             this.bt_validateglace.TabIndex = 14;
             this.bt_validateglace.Text = "Ajouter";
-            this.bt_validateglace.UseVisualStyleBackColor = true;
+            this.bt_validateglace.UseVisualStyleBackColor = false;
             this.bt_validateglace.Click += new System.EventHandler(this.bt_validateglace_Click);
             // 
             // bt_validategateau
             // 
+            this.bt_validategateau.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validategateau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_validategateau.Location = new System.Drawing.Point(416, 148);
             this.bt_validategateau.Name = "bt_validategateau";
             this.bt_validategateau.Size = new System.Drawing.Size(102, 35);
             this.bt_validategateau.TabIndex = 13;
             this.bt_validategateau.Text = "Ajouter";
-            this.bt_validategateau.UseVisualStyleBackColor = true;
+            this.bt_validategateau.UseVisualStyleBackColor = false;
             this.bt_validategateau.Click += new System.EventHandler(this.bt_validategateau_Click);
             // 
             // bt_validateboisson
             // 
+            this.bt_validateboisson.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateboisson.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_validateboisson.Location = new System.Drawing.Point(130, 149);
             this.bt_validateboisson.Name = "bt_validateboisson";
             this.bt_validateboisson.Size = new System.Drawing.Size(102, 35);
             this.bt_validateboisson.TabIndex = 5;
             this.bt_validateboisson.Text = "Ajouter";
-            this.bt_validateboisson.UseVisualStyleBackColor = true;
+            this.bt_validateboisson.UseVisualStyleBackColor = false;
             this.bt_validateboisson.Click += new System.EventHandler(this.bt_validateboisson_Click);
             // 
             // num_equipments
@@ -234,7 +244,9 @@
             // lb_recapvente
             // 
             this.lb_recapvente.AutoSize = true;
+            this.lb_recapvente.BackColor = System.Drawing.Color.Transparent;
             this.lb_recapvente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_recapvente.ForeColor = System.Drawing.Color.White;
             this.lb_recapvente.Location = new System.Drawing.Point(77, 304);
             this.lb_recapvente.Name = "lb_recapvente";
             this.lb_recapvente.Size = new System.Drawing.Size(248, 24);
@@ -243,17 +255,21 @@
             // 
             // bt_validatevente
             // 
+            this.bt_validatevente.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validatevente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_validatevente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validatevente.ForeColor = System.Drawing.Color.White;
             this.bt_validatevente.Location = new System.Drawing.Point(505, 501);
             this.bt_validatevente.Name = "bt_validatevente";
             this.bt_validatevente.Size = new System.Drawing.Size(198, 35);
             this.bt_validatevente.TabIndex = 16;
             this.bt_validatevente.Text = "VALIDER VENTE";
-            this.bt_validatevente.UseVisualStyleBackColor = true;
+            this.bt_validatevente.UseVisualStyleBackColor = false;
             this.bt_validatevente.Click += new System.EventHandler(this.bt_validatevente_Click);
             // 
             // dg_recapVente
             // 
+            this.dg_recapVente.BackgroundColor = System.Drawing.Color.Teal;
             this.dg_recapVente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_recapVente.Location = new System.Drawing.Point(81, 331);
             this.dg_recapVente.Name = "dg_recapVente";
@@ -264,7 +280,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 821);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(1329, 562);
             this.Controls.Add(this.dg_recapVente);
             this.Controls.Add(this.bt_validatevente);
             this.Controls.Add(this.lb_recapvente);

@@ -385,6 +385,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmViewPanelConfProduits";
             this.Text = "FrmViewPanelConfProduits";
+            this.Load += new System.EventHandler(this.FrmViewPanelConfProduits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
             this.bn.ResumeLayout(false);
             this.bn.PerformLayout();

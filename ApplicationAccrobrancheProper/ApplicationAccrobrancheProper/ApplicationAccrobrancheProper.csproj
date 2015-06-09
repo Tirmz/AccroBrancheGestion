@@ -89,12 +89,6 @@
     <Compile Include="FrmChiffreAffaire.Designer.cs">
       <DependentUpon>FrmChiffreAffaire.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConfigs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConfigs.Designer.cs">
-      <DependentUpon>FrmConfigs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frmcrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +178,6 @@
     <EmbeddedResource Include="FrmChiffreAffaire.resx">
       <DependentUpon>FrmChiffreAffaire.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConfigs.resx">
-      <DependentUpon>FrmConfigs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frmcrud.resx">
       <DependentUpon>Frmcrud.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +210,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Modele.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -258,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

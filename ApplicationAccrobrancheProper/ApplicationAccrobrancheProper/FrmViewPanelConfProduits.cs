@@ -24,5 +24,10 @@ namespace ApplicationAccrobrancheProper
         {
 
         }
+
+        private void FrmViewPanelConfProduits_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

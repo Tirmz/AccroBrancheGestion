@@ -129,7 +129,8 @@ namespace ApplicationAccrobrancheProper
         private void bt_goDoSale_Click(object sender, EventArgs e)
         {
             FrmVente frm = new FrmVente(bd);
-            frm.Show();
+            frm.ShowDialog();
+            bs.DataSource = bd.Produit.ToList();
         }
         /// <summary>
         /// Ouvre le formulaire permettant de configurer les Produits, fournisseurs, catégorie (Méthodes CRUD).

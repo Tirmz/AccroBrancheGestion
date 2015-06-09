@@ -36,7 +36,9 @@
             // lb_nameCategorie
             // 
             this.lb_nameCategorie.AutoSize = true;
+            this.lb_nameCategorie.BackColor = System.Drawing.Color.Transparent;
             this.lb_nameCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameCategorie.ForeColor = System.Drawing.Color.White;
             this.lb_nameCategorie.Location = new System.Drawing.Point(12, 30);
             this.lb_nameCategorie.Name = "lb_nameCategorie";
             this.lb_nameCategorie.Size = new System.Drawing.Size(77, 29);
@@ -53,18 +55,23 @@
             // 
             // bt_validateAjout
             // 
-            this.bt_validateAjout.Location = new System.Drawing.Point(143, 80);
+            this.bt_validateAjout.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateAjout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_validateAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validateAjout.ForeColor = System.Drawing.Color.White;
+            this.bt_validateAjout.Location = new System.Drawing.Point(145, 72);
             this.bt_validateAjout.Name = "bt_validateAjout";
-            this.bt_validateAjout.Size = new System.Drawing.Size(89, 26);
+            this.bt_validateAjout.Size = new System.Drawing.Size(101, 34);
             this.bt_validateAjout.TabIndex = 13;
             this.bt_validateAjout.Text = "Valider";
-            this.bt_validateAjout.UseVisualStyleBackColor = true;
+            this.bt_validateAjout.UseVisualStyleBackColor = false;
             this.bt_validateAjout.Click += new System.EventHandler(this.bt_validateAjout_Click);
             // 
             // FrmAjoutCategorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(365, 118);
             this.Controls.Add(this.bt_validateAjout);
             this.Controls.Add(this.txt_nameCategorie);

@@ -71,7 +71,9 @@
             // lb_titleGestionStock
             // 
             this.lb_titleGestionStock.AutoSize = true;
+            this.lb_titleGestionStock.BackColor = System.Drawing.Color.Transparent;
             this.lb_titleGestionStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_titleGestionStock.ForeColor = System.Drawing.Color.White;
             this.lb_titleGestionStock.Location = new System.Drawing.Point(482, 25);
             this.lb_titleGestionStock.Name = "lb_titleGestionStock";
             this.lb_titleGestionStock.Size = new System.Drawing.Size(207, 33);
@@ -80,12 +82,16 @@
             // 
             // bt_goDoSale
             // 
+            this.bt_goDoSale.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_goDoSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_goDoSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_goDoSale.ForeColor = System.Drawing.Color.White;
             this.bt_goDoSale.Location = new System.Drawing.Point(12, 45);
             this.bt_goDoSale.Name = "bt_goDoSale";
             this.bt_goDoSale.Size = new System.Drawing.Size(244, 197);
             this.bt_goDoSale.TabIndex = 1;
             this.bt_goDoSale.Text = "FAIRE UNE VENTE";
-            this.bt_goDoSale.UseVisualStyleBackColor = true;
+            this.bt_goDoSale.UseVisualStyleBackColor = false;
             this.bt_goDoSale.Click += new System.EventHandler(this.bt_goDoSale_Click);
             // 
             // bn
@@ -216,7 +222,7 @@
             // produitDataGridView
             // 
             this.produitDataGridView.AutoGenerateColumns = false;
-            this.produitDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.produitDataGridView.BackgroundColor = System.Drawing.Color.Teal;
             this.produitDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produitDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -254,6 +260,7 @@
             // lb_rappelStock
             // 
             this.lb_rappelStock.AutoSize = true;
+            this.lb_rappelStock.BackColor = System.Drawing.Color.Transparent;
             this.lb_rappelStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_rappelStock.ForeColor = System.Drawing.Color.Red;
             this.lb_rappelStock.Location = new System.Drawing.Point(271, 618);
@@ -265,33 +272,43 @@
             // 
             // bt_watchEarnings
             // 
+            this.bt_watchEarnings.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_watchEarnings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_watchEarnings.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_watchEarnings.ForeColor = System.Drawing.Color.White;
             this.bt_watchEarnings.Location = new System.Drawing.Point(12, 248);
             this.bt_watchEarnings.Name = "bt_watchEarnings";
             this.bt_watchEarnings.Size = new System.Drawing.Size(244, 197);
             this.bt_watchEarnings.TabIndex = 5;
-            this.bt_watchEarnings.Text = "LES CHIFFRES D\'AFFAIRE";
-            this.bt_watchEarnings.UseVisualStyleBackColor = true;
+            this.bt_watchEarnings.Text = "CHIFFRE D\'AFFAIRE";
+            this.bt_watchEarnings.UseVisualStyleBackColor = false;
             this.bt_watchEarnings.Click += new System.EventHandler(this.bt_watchEarnings_Click);
             // 
             // bt_goConfigs
             // 
+            this.bt_goConfigs.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_goConfigs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_goConfigs.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_goConfigs.ForeColor = System.Drawing.Color.White;
             this.bt_goConfigs.Location = new System.Drawing.Point(12, 451);
             this.bt_goConfigs.Name = "bt_goConfigs";
             this.bt_goConfigs.Size = new System.Drawing.Size(244, 197);
             this.bt_goConfigs.TabIndex = 6;
-            this.bt_goConfigs.Text = "REGLAGES";
-            this.bt_goConfigs.UseVisualStyleBackColor = true;
+            this.bt_goConfigs.Text = "OPTIONS";
+            this.bt_goConfigs.UseVisualStyleBackColor = false;
             this.bt_goConfigs.Click += new System.EventHandler(this.bt_goConfigs_Click);
             // 
             // cbx_productinalert
             // 
             this.cbx_productinalert.AutoSize = true;
+            this.cbx_productinalert.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_productinalert.ForeColor = System.Drawing.Color.White;
             this.cbx_productinalert.Location = new System.Drawing.Point(276, 50);
             this.cbx_productinalert.Name = "cbx_productinalert";
             this.cbx_productinalert.Size = new System.Drawing.Size(109, 17);
             this.cbx_productinalert.TabIndex = 7;
             this.cbx_productinalert.Text = "Produits en Alerte";
-            this.cbx_productinalert.UseVisualStyleBackColor = true;
+            this.cbx_productinalert.UseVisualStyleBackColor = false;
             this.cbx_productinalert.CheckedChanged += new System.EventHandler(this.cbx_productinalert_CheckedChanged);
             // 
             // dataGridViewTextBoxColumn1
@@ -367,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1484, 661);
             this.Controls.Add(this.cbx_productinalert);
             this.Controls.Add(this.bt_goConfigs);

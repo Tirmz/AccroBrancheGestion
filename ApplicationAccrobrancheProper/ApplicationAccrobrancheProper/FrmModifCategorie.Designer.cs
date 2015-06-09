@@ -35,12 +35,15 @@
             // 
             // bt_validateModif
             // 
-            this.bt_validateModif.Location = new System.Drawing.Point(140, 72);
+            this.bt_validateModif.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validateModif.ForeColor = System.Drawing.Color.White;
+            this.bt_validateModif.Location = new System.Drawing.Point(108, 72);
             this.bt_validateModif.Name = "bt_validateModif";
-            this.bt_validateModif.Size = new System.Drawing.Size(89, 26);
+            this.bt_validateModif.Size = new System.Drawing.Size(119, 33);
             this.bt_validateModif.TabIndex = 16;
             this.bt_validateModif.Text = "Valider";
-            this.bt_validateModif.UseVisualStyleBackColor = true;
+            this.bt_validateModif.UseVisualStyleBackColor = false;
             this.bt_validateModif.Click += new System.EventHandler(this.bt_validateModif_Click);
             // 
             // txt_nameCategorie
@@ -48,13 +51,15 @@
             this.txt_nameCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nameCategorie.Location = new System.Drawing.Point(108, 19);
             this.txt_nameCategorie.Name = "txt_nameCategorie";
-            this.txt_nameCategorie.Size = new System.Drawing.Size(205, 35);
+            this.txt_nameCategorie.Size = new System.Drawing.Size(259, 35);
             this.txt_nameCategorie.TabIndex = 15;
             // 
             // lb_nameCategorie
             // 
             this.lb_nameCategorie.AutoSize = true;
+            this.lb_nameCategorie.BackColor = System.Drawing.Color.Transparent;
             this.lb_nameCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameCategorie.ForeColor = System.Drawing.Color.White;
             this.lb_nameCategorie.Location = new System.Drawing.Point(9, 22);
             this.lb_nameCategorie.Name = "lb_nameCategorie";
             this.lb_nameCategorie.Size = new System.Drawing.Size(77, 29);
@@ -65,12 +70,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 117);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(393, 117);
             this.Controls.Add(this.bt_validateModif);
             this.Controls.Add(this.txt_nameCategorie);
             this.Controls.Add(this.lb_nameCategorie);
             this.Name = "FrmModifCategorie";
-            this.Text = "FrmModifCategorie";
+            this.Text = "Modifier une Catégorie";
             this.ResumeLayout(false);
             this.PerformLayout();
 

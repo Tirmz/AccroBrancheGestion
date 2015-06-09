@@ -109,7 +109,9 @@ namespace ApplicationAccrobrancheProper
             dg_recapVente.Columns["LeProduit"].DisplayIndex = 6;
             dg_recapVente.Columns["GetPrixUnitaire"].DisplayIndex = 7;
             dg_recapVente.Columns["GetDateVente"].DisplayIndex = 8;
-            dg_recapVente.Columns["GetTotalHTLigneVente"].DisplayIndex = 9;
+            dg_recapVente.Columns["getPrixTTC"].DisplayIndex = 9;
+            dg_recapVente.Columns["GetTotalHTLigneVente"].DisplayIndex = 10;
+            dg_recapVente.Columns["GetTotalTTCLigneVente"].DisplayIndex = 11;
 
             dg_recapVente.Columns["idLignedeVente"].Visible = false;
             dg_recapVente.Columns["idVente"].Visible = false;
@@ -120,8 +122,10 @@ namespace ApplicationAccrobrancheProper
             dg_recapVente.Columns["idProduit"].HeaderText = "Référence";
             dg_recapVente.Columns["GetNomProduit"].HeaderText = "Produit";
             dg_recapVente.Columns["quantiteVente"].HeaderText = "Quantité";
-            dg_recapVente.Columns["GetPrixUnitaire"].HeaderText = "Prix Unitaire";
-            dg_recapVente.Columns["GetTotalHTLigneVente"].HeaderText = "Total";
+            dg_recapVente.Columns["GetPrixUnitaire"].HeaderText = "Prix Unitaire HT";
+            dg_recapVente.Columns["getPrixTTC"].HeaderText = "Prix Unitaire TTC";
+            dg_recapVente.Columns["GetTotalHTLigneVente"].HeaderText = "Total HT";
+            dg_recapVente.Columns["GetTotalTTCLigneVente"].HeaderText = "Total TTC";
         }
 
         /// <summary>

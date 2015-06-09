@@ -47,35 +47,42 @@
             // 
             // bt_validateAjout
             // 
-            this.bt_validateAjout.Location = new System.Drawing.Point(196, 292);
+            this.bt_validateAjout.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateAjout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_validateAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validateAjout.ForeColor = System.Drawing.Color.White;
+            this.bt_validateAjout.Location = new System.Drawing.Point(108, 279);
             this.bt_validateAjout.Name = "bt_validateAjout";
-            this.bt_validateAjout.Size = new System.Drawing.Size(75, 23);
+            this.bt_validateAjout.Size = new System.Drawing.Size(120, 36);
             this.bt_validateAjout.TabIndex = 25;
             this.bt_validateAjout.Text = "Modifier";
-            this.bt_validateAjout.UseVisualStyleBackColor = true;
+            this.bt_validateAjout.UseVisualStyleBackColor = false;
             this.bt_validateAjout.Click += new System.EventHandler(this.bt_validateAjout_Click);
             // 
             // cbx_fournisseur
             // 
             this.cbx_fournisseur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_fournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_fournisseur.FormattingEnabled = true;
-            this.cbx_fournisseur.Location = new System.Drawing.Point(195, 239);
+            this.cbx_fournisseur.Location = new System.Drawing.Point(175, 234);
             this.cbx_fournisseur.Name = "cbx_fournisseur";
-            this.cbx_fournisseur.Size = new System.Drawing.Size(121, 21);
+            this.cbx_fournisseur.Size = new System.Drawing.Size(232, 28);
             this.cbx_fournisseur.TabIndex = 24;
             // 
             // cbx_categorie
             // 
             this.cbx_categorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_categorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_categorie.FormattingEnabled = true;
-            this.cbx_categorie.Location = new System.Drawing.Point(195, 202);
+            this.cbx_categorie.Location = new System.Drawing.Point(175, 197);
             this.cbx_categorie.Name = "cbx_categorie";
-            this.cbx_categorie.Size = new System.Drawing.Size(121, 21);
+            this.cbx_categorie.Size = new System.Drawing.Size(232, 28);
             this.cbx_categorie.TabIndex = 23;
             // 
             // num_alert
             // 
-            this.num_alert.Location = new System.Drawing.Point(196, 161);
+            this.num_alert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_alert.Location = new System.Drawing.Point(177, 161);
             this.num_alert.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -87,7 +94,7 @@
             0,
             0});
             this.num_alert.Name = "num_alert";
-            this.num_alert.Size = new System.Drawing.Size(120, 20);
+            this.num_alert.Size = new System.Drawing.Size(230, 26);
             this.num_alert.TabIndex = 22;
             this.num_alert.Value = new decimal(new int[] {
             1,
@@ -97,7 +104,8 @@
             // 
             // num_quantite
             // 
-            this.num_quantite.Location = new System.Drawing.Point(196, 127);
+            this.num_quantite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_quantite.Location = new System.Drawing.Point(177, 129);
             this.num_quantite.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -109,7 +117,7 @@
             0,
             0});
             this.num_quantite.Name = "num_quantite";
-            this.num_quantite.Size = new System.Drawing.Size(120, 20);
+            this.num_quantite.Size = new System.Drawing.Size(230, 26);
             this.num_quantite.TabIndex = 21;
             this.num_quantite.Value = new decimal(new int[] {
             1,
@@ -119,32 +127,38 @@
             // 
             // txt_prix
             // 
-            this.txt_prix.Location = new System.Drawing.Point(196, 92);
+            this.txt_prix.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_prix.Location = new System.Drawing.Point(175, 88);
             this.txt_prix.Name = "txt_prix";
-            this.txt_prix.Size = new System.Drawing.Size(120, 20);
+            this.txt_prix.Size = new System.Drawing.Size(232, 26);
             this.txt_prix.TabIndex = 20;
             // 
             // txt_nameProduct
             // 
-            this.txt_nameProduct.Location = new System.Drawing.Point(196, 59);
+            this.txt_nameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nameProduct.Location = new System.Drawing.Point(175, 52);
             this.txt_nameProduct.Name = "txt_nameProduct";
-            this.txt_nameProduct.Size = new System.Drawing.Size(120, 20);
+            this.txt_nameProduct.Size = new System.Drawing.Size(232, 26);
             this.txt_nameProduct.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(24, 234);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 24);
+            this.label6.Size = new System.Drawing.Size(121, 24);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Fournisseur";
+            this.label6.Text = "Fournisseur :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(24, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 24);
@@ -154,18 +168,23 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 157);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(24, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 24);
             this.label4.TabIndex = 16;
             this.label4.Text = "Seuil d\'Alerte :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 121);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(24, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 24);
             this.label3.TabIndex = 15;
@@ -174,7 +193,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(24, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 24);
@@ -184,7 +205,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(24, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 24);
@@ -195,7 +218,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 368);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(443, 334);
             this.Controls.Add(this.bt_validateAjout);
             this.Controls.Add(this.cbx_fournisseur);
             this.Controls.Add(this.cbx_categorie);
@@ -210,7 +234,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmModifProduit";
-            this.Text = "FrmModifProduit";
+            this.Text = "Modifier un Produit";
             this.Load += new System.EventHandler(this.FrmModifProduit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_alert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_quantite)).EndInit();

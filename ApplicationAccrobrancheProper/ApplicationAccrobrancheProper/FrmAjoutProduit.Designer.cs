@@ -48,8 +48,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
@@ -58,8 +60,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 110);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 24);
             this.label2.TabIndex = 1;
@@ -68,8 +72,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 143);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 24);
             this.label3.TabIndex = 2;
@@ -78,8 +84,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 179);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 24);
             this.label4.TabIndex = 3;
@@ -88,8 +96,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 219);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 165);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 24);
             this.label5.TabIndex = 4;
@@ -98,8 +108,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 256);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 24);
             this.label6.TabIndex = 5;
@@ -107,21 +119,21 @@
             // 
             // txt_nameProduct
             // 
-            this.txt_nameProduct.Location = new System.Drawing.Point(184, 81);
+            this.txt_nameProduct.Location = new System.Drawing.Point(184, 27);
             this.txt_nameProduct.Name = "txt_nameProduct";
             this.txt_nameProduct.Size = new System.Drawing.Size(120, 20);
             this.txt_nameProduct.TabIndex = 6;
             // 
             // txt_prix
             // 
-            this.txt_prix.Location = new System.Drawing.Point(184, 114);
+            this.txt_prix.Location = new System.Drawing.Point(184, 60);
             this.txt_prix.Name = "txt_prix";
             this.txt_prix.Size = new System.Drawing.Size(120, 20);
             this.txt_prix.TabIndex = 7;
             // 
             // num_quantite
             // 
-            this.num_quantite.Location = new System.Drawing.Point(184, 149);
+            this.num_quantite.Location = new System.Drawing.Point(184, 95);
             this.num_quantite.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -143,7 +155,7 @@
             // 
             // num_alert
             // 
-            this.num_alert.Location = new System.Drawing.Point(184, 183);
+            this.num_alert.Location = new System.Drawing.Point(184, 129);
             this.num_alert.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -167,7 +179,7 @@
             // 
             this.cbx_categorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_categorie.FormattingEnabled = true;
-            this.cbx_categorie.Location = new System.Drawing.Point(183, 224);
+            this.cbx_categorie.Location = new System.Drawing.Point(183, 170);
             this.cbx_categorie.Name = "cbx_categorie";
             this.cbx_categorie.Size = new System.Drawing.Size(121, 21);
             this.cbx_categorie.TabIndex = 10;
@@ -176,26 +188,31 @@
             // 
             this.cbx_fournisseur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_fournisseur.FormattingEnabled = true;
-            this.cbx_fournisseur.Location = new System.Drawing.Point(183, 261);
+            this.cbx_fournisseur.Location = new System.Drawing.Point(183, 207);
             this.cbx_fournisseur.Name = "cbx_fournisseur";
             this.cbx_fournisseur.Size = new System.Drawing.Size(121, 21);
             this.cbx_fournisseur.TabIndex = 11;
             // 
             // bt_validateAjout
             // 
-            this.bt_validateAjout.Location = new System.Drawing.Point(184, 314);
+            this.bt_validateAjout.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_validateAjout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_validateAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_validateAjout.ForeColor = System.Drawing.Color.White;
+            this.bt_validateAjout.Location = new System.Drawing.Point(121, 263);
             this.bt_validateAjout.Name = "bt_validateAjout";
-            this.bt_validateAjout.Size = new System.Drawing.Size(75, 23);
+            this.bt_validateAjout.Size = new System.Drawing.Size(95, 34);
             this.bt_validateAjout.TabIndex = 12;
             this.bt_validateAjout.Text = "Valider";
-            this.bt_validateAjout.UseVisualStyleBackColor = true;
+            this.bt_validateAjout.UseVisualStyleBackColor = false;
             this.bt_validateAjout.Click += new System.EventHandler(this.bt_validateAjout_Click);
             // 
             // FrmAjoutProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 382);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(343, 309);
             this.Controls.Add(this.bt_validateAjout);
             this.Controls.Add(this.cbx_fournisseur);
             this.Controls.Add(this.cbx_categorie);
@@ -210,7 +227,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmAjoutProduit";
-            this.Text = "Ajout Produit";
+            this.Text = "Ajouter un Produit";
             this.Load += new System.EventHandler(this.FrmAjoutProduit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_quantite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_alert)).EndInit();

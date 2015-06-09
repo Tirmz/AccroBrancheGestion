@@ -44,5 +44,15 @@ namespace ApplicationAccrobrancheProper
         {
             get { return (float)Math.Round((float)LeProduit.prixProduitHT, 2); }
         }
+
+        public float getPrixTTC
+        {
+            get { return LeProduit.GetPrixTCC; }
+        }
+
+        public float GetTotalTTCLigneVente
+        {
+            get { return (float)Math.Round((float)(this.quantiteVente * LeProduit.prixProduitHT)*1.20, 2); }
+        }
     }
 }
