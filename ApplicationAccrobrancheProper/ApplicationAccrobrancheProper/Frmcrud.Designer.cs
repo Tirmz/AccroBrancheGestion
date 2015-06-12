@@ -29,22 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmcrud));
             this.tabCrud = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.bt_updateProduct = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bt_deleteProduct = new System.Windows.Forms.Button();
             this.bt_addProduct = new System.Windows.Forms.Button();
+            this.bt_updateProduct = new System.Windows.Forms.Button();
             this.dg_products = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.bt_addCategorie = new System.Windows.Forms.Button();
-            this.bt_updateCategorie = new System.Windows.Forms.Button();
-            this.bt_deleteCategorie = new System.Windows.Forms.Button();
-            this.dg_categories = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.bt_addFournissseur = new System.Windows.Forms.Button();
-            this.bt_updateFournissseur = new System.Windows.Forms.Button();
-            this.bt_deleteFournisseur = new System.Windows.Forms.Button();
-            this.dg_fournisseur = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,30 +50,39 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bt_deleteCategorie = new System.Windows.Forms.Button();
+            this.bt_addCategorie = new System.Windows.Forms.Button();
+            this.bt_updateCategorie = new System.Windows.Forms.Button();
+            this.dg_categories = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsCategorie = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bt_deleteFournisseur = new System.Windows.Forms.Button();
+            this.bt_addFournissseur = new System.Windows.Forms.Button();
+            this.bt_updateFournissseur = new System.Windows.Forms.Button();
+            this.dg_fournisseur = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsFournisseur = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabCrud.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_categories)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_fournisseur)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCategorie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsFournisseur)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_categories)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCategorie)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_fournisseur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFournisseur)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCrud
@@ -107,19 +108,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
-            // bt_updateProduct
+            // groupBox1
             // 
-            this.bt_updateProduct.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_updateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_updateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_updateProduct.ForeColor = System.Drawing.Color.White;
-            this.bt_updateProduct.Location = new System.Drawing.Point(238, 14);
-            this.bt_updateProduct.Name = "bt_updateProduct";
-            this.bt_updateProduct.Size = new System.Drawing.Size(122, 45);
-            this.bt_updateProduct.TabIndex = 2;
-            this.bt_updateProduct.Text = "Modifier";
-            this.bt_updateProduct.UseVisualStyleBackColor = false;
-            this.bt_updateProduct.Click += new System.EventHandler(this.bt_update_Click);
+            this.groupBox1.Controls.Add(this.bt_deleteProduct);
+            this.groupBox1.Controls.Add(this.bt_addProduct);
+            this.groupBox1.Controls.Add(this.bt_updateProduct);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(355, 461);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(514, 65);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Actions";
             // 
             // bt_deleteProduct
             // 
@@ -149,6 +150,20 @@
             this.bt_addProduct.UseVisualStyleBackColor = false;
             this.bt_addProduct.Click += new System.EventHandler(this.bt_addProduct_Click);
             // 
+            // bt_updateProduct
+            // 
+            this.bt_updateProduct.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_updateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_updateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_updateProduct.ForeColor = System.Drawing.Color.White;
+            this.bt_updateProduct.Location = new System.Drawing.Point(238, 14);
+            this.bt_updateProduct.Name = "bt_updateProduct";
+            this.bt_updateProduct.Size = new System.Drawing.Size(122, 45);
+            this.bt_updateProduct.TabIndex = 2;
+            this.bt_updateProduct.Text = "Modifier";
+            this.bt_updateProduct.UseVisualStyleBackColor = false;
+            this.bt_updateProduct.Click += new System.EventHandler(this.bt_update_Click);
+            // 
             // dg_products
             // 
             this.dg_products.AutoGenerateColumns = false;
@@ -172,144 +187,6 @@
             this.dg_products.Name = "dg_products";
             this.dg_products.Size = new System.Drawing.Size(1025, 455);
             this.dg_products.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.Teal;
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.dg_categories);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1179, 545);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            // 
-            // bt_addCategorie
-            // 
-            this.bt_addCategorie.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_addCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_addCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_addCategorie.ForeColor = System.Drawing.Color.White;
-            this.bt_addCategorie.Location = new System.Drawing.Point(325, 25);
-            this.bt_addCategorie.Name = "bt_addCategorie";
-            this.bt_addCategorie.Size = new System.Drawing.Size(122, 45);
-            this.bt_addCategorie.TabIndex = 3;
-            this.bt_addCategorie.Text = "Ajouter";
-            this.bt_addCategorie.UseVisualStyleBackColor = false;
-            this.bt_addCategorie.Click += new System.EventHandler(this.bt_addCategorie_Click);
-            // 
-            // bt_updateCategorie
-            // 
-            this.bt_updateCategorie.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_updateCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_updateCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_updateCategorie.ForeColor = System.Drawing.Color.White;
-            this.bt_updateCategorie.Location = new System.Drawing.Point(197, 25);
-            this.bt_updateCategorie.Name = "bt_updateCategorie";
-            this.bt_updateCategorie.Size = new System.Drawing.Size(122, 45);
-            this.bt_updateCategorie.TabIndex = 2;
-            this.bt_updateCategorie.Text = "Modifier";
-            this.bt_updateCategorie.UseVisualStyleBackColor = false;
-            this.bt_updateCategorie.Click += new System.EventHandler(this.bt_updateCategorie_Click);
-            // 
-            // bt_deleteCategorie
-            // 
-            this.bt_deleteCategorie.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_deleteCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_deleteCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_deleteCategorie.ForeColor = System.Drawing.Color.White;
-            this.bt_deleteCategorie.Location = new System.Drawing.Point(69, 25);
-            this.bt_deleteCategorie.Name = "bt_deleteCategorie";
-            this.bt_deleteCategorie.Size = new System.Drawing.Size(122, 45);
-            this.bt_deleteCategorie.TabIndex = 1;
-            this.bt_deleteCategorie.Text = "Supprimer";
-            this.bt_deleteCategorie.UseVisualStyleBackColor = false;
-            this.bt_deleteCategorie.Click += new System.EventHandler(this.bt_deleteCategorie_Click);
-            // 
-            // dg_categories
-            // 
-            this.dg_categories.AutoGenerateColumns = false;
-            this.dg_categories.BackgroundColor = System.Drawing.Color.Teal;
-            this.dg_categories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_categories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.dg_categories.DataSource = this.bsCategorie;
-            this.dg_categories.Location = new System.Drawing.Point(421, 81);
-            this.dg_categories.Name = "dg_categories";
-            this.dg_categories.Size = new System.Drawing.Size(335, 220);
-            this.dg_categories.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Teal;
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.dg_fournisseur);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1179, 545);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            // 
-            // bt_addFournissseur
-            // 
-            this.bt_addFournissseur.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_addFournissseur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_addFournissseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_addFournissseur.ForeColor = System.Drawing.Color.White;
-            this.bt_addFournissseur.Location = new System.Drawing.Point(299, 24);
-            this.bt_addFournissseur.Name = "bt_addFournissseur";
-            this.bt_addFournissseur.Size = new System.Drawing.Size(122, 45);
-            this.bt_addFournissseur.TabIndex = 3;
-            this.bt_addFournissseur.Text = "Ajouter";
-            this.bt_addFournissseur.UseVisualStyleBackColor = false;
-            this.bt_addFournissseur.Click += new System.EventHandler(this.bt_addFournissseur_Click);
-            // 
-            // bt_updateFournissseur
-            // 
-            this.bt_updateFournissseur.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_updateFournissseur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_updateFournissseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_updateFournissseur.ForeColor = System.Drawing.Color.White;
-            this.bt_updateFournissseur.Location = new System.Drawing.Point(173, 25);
-            this.bt_updateFournissseur.Name = "bt_updateFournissseur";
-            this.bt_updateFournissseur.Size = new System.Drawing.Size(122, 45);
-            this.bt_updateFournissseur.TabIndex = 2;
-            this.bt_updateFournissseur.Text = "Modifier";
-            this.bt_updateFournissseur.UseVisualStyleBackColor = false;
-            this.bt_updateFournissseur.Click += new System.EventHandler(this.bt_updateFournissseur_Click);
-            // 
-            // bt_deleteFournisseur
-            // 
-            this.bt_deleteFournisseur.BackColor = System.Drawing.Color.SeaGreen;
-            this.bt_deleteFournisseur.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_deleteFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_deleteFournisseur.ForeColor = System.Drawing.Color.White;
-            this.bt_deleteFournisseur.Location = new System.Drawing.Point(45, 25);
-            this.bt_deleteFournisseur.Name = "bt_deleteFournisseur";
-            this.bt_deleteFournisseur.Size = new System.Drawing.Size(122, 45);
-            this.bt_deleteFournisseur.TabIndex = 1;
-            this.bt_deleteFournisseur.Text = "Supprimer";
-            this.bt_deleteFournisseur.UseVisualStyleBackColor = false;
-            this.bt_deleteFournisseur.Click += new System.EventHandler(this.bt_deleteFournisseur_Click);
-            // 
-            // dg_fournisseur
-            // 
-            this.dg_fournisseur.AutoGenerateColumns = false;
-            this.dg_fournisseur.BackgroundColor = System.Drawing.Color.Teal;
-            this.dg_fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_fournisseur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18});
-            this.dg_fournisseur.DataSource = this.bsFournisseur;
-            this.dg_fournisseur.Location = new System.Drawing.Point(255, 96);
-            this.dg_fournisseur.Name = "dg_fournisseur";
-            this.dg_fournisseur.Size = new System.Drawing.Size(603, 220);
-            this.dg_fournisseur.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -396,6 +273,88 @@
             // 
             this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Teal;
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.dg_categories);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1179, 545);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.bt_deleteCategorie);
+            this.groupBox2.Controls.Add(this.bt_addCategorie);
+            this.groupBox2.Controls.Add(this.bt_updateCategorie);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(359, 322);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(459, 86);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Actions";
+            // 
+            // bt_deleteCategorie
+            // 
+            this.bt_deleteCategorie.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_deleteCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_deleteCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_deleteCategorie.ForeColor = System.Drawing.Color.White;
+            this.bt_deleteCategorie.Location = new System.Drawing.Point(69, 25);
+            this.bt_deleteCategorie.Name = "bt_deleteCategorie";
+            this.bt_deleteCategorie.Size = new System.Drawing.Size(122, 45);
+            this.bt_deleteCategorie.TabIndex = 1;
+            this.bt_deleteCategorie.Text = "Supprimer";
+            this.bt_deleteCategorie.UseVisualStyleBackColor = false;
+            this.bt_deleteCategorie.Click += new System.EventHandler(this.bt_deleteCategorie_Click);
+            // 
+            // bt_addCategorie
+            // 
+            this.bt_addCategorie.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_addCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_addCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_addCategorie.ForeColor = System.Drawing.Color.White;
+            this.bt_addCategorie.Location = new System.Drawing.Point(325, 25);
+            this.bt_addCategorie.Name = "bt_addCategorie";
+            this.bt_addCategorie.Size = new System.Drawing.Size(122, 45);
+            this.bt_addCategorie.TabIndex = 3;
+            this.bt_addCategorie.Text = "Ajouter";
+            this.bt_addCategorie.UseVisualStyleBackColor = false;
+            this.bt_addCategorie.Click += new System.EventHandler(this.bt_addCategorie_Click);
+            // 
+            // bt_updateCategorie
+            // 
+            this.bt_updateCategorie.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_updateCategorie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_updateCategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_updateCategorie.ForeColor = System.Drawing.Color.White;
+            this.bt_updateCategorie.Location = new System.Drawing.Point(197, 25);
+            this.bt_updateCategorie.Name = "bt_updateCategorie";
+            this.bt_updateCategorie.Size = new System.Drawing.Size(122, 45);
+            this.bt_updateCategorie.TabIndex = 2;
+            this.bt_updateCategorie.Text = "Modifier";
+            this.bt_updateCategorie.UseVisualStyleBackColor = false;
+            this.bt_updateCategorie.Click += new System.EventHandler(this.bt_updateCategorie_Click);
+            // 
+            // dg_categories
+            // 
+            this.dg_categories.AutoGenerateColumns = false;
+            this.dg_categories.BackgroundColor = System.Drawing.Color.Teal;
+            this.dg_categories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_categories.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.dg_categories.DataSource = this.bsCategorie;
+            this.dg_categories.Location = new System.Drawing.Point(421, 81);
+            this.dg_categories.Name = "dg_categories";
+            this.dg_categories.Size = new System.Drawing.Size(335, 220);
+            this.dg_categories.TabIndex = 0;
+            // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "idCategorie";
@@ -412,6 +371,90 @@
             // bsCategorie
             // 
             this.bsCategorie.DataSource = typeof(ApplicationAccrobrancheProper.Categorie);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.dg_fournisseur);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1179, 545);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.bt_deleteFournisseur);
+            this.groupBox3.Controls.Add(this.bt_addFournissseur);
+            this.groupBox3.Controls.Add(this.bt_updateFournissseur);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(340, 339);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(440, 82);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Actions";
+            // 
+            // bt_deleteFournisseur
+            // 
+            this.bt_deleteFournisseur.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_deleteFournisseur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_deleteFournisseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_deleteFournisseur.ForeColor = System.Drawing.Color.White;
+            this.bt_deleteFournisseur.Location = new System.Drawing.Point(45, 25);
+            this.bt_deleteFournisseur.Name = "bt_deleteFournisseur";
+            this.bt_deleteFournisseur.Size = new System.Drawing.Size(122, 45);
+            this.bt_deleteFournisseur.TabIndex = 1;
+            this.bt_deleteFournisseur.Text = "Supprimer";
+            this.bt_deleteFournisseur.UseVisualStyleBackColor = false;
+            this.bt_deleteFournisseur.Click += new System.EventHandler(this.bt_deleteFournisseur_Click);
+            // 
+            // bt_addFournissseur
+            // 
+            this.bt_addFournissseur.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_addFournissseur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_addFournissseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_addFournissseur.ForeColor = System.Drawing.Color.White;
+            this.bt_addFournissseur.Location = new System.Drawing.Point(299, 24);
+            this.bt_addFournissseur.Name = "bt_addFournissseur";
+            this.bt_addFournissseur.Size = new System.Drawing.Size(122, 45);
+            this.bt_addFournissseur.TabIndex = 3;
+            this.bt_addFournissseur.Text = "Ajouter";
+            this.bt_addFournissseur.UseVisualStyleBackColor = false;
+            this.bt_addFournissseur.Click += new System.EventHandler(this.bt_addFournissseur_Click);
+            // 
+            // bt_updateFournissseur
+            // 
+            this.bt_updateFournissseur.BackColor = System.Drawing.Color.SeaGreen;
+            this.bt_updateFournissseur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_updateFournissseur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_updateFournissseur.ForeColor = System.Drawing.Color.White;
+            this.bt_updateFournissseur.Location = new System.Drawing.Point(173, 25);
+            this.bt_updateFournissseur.Name = "bt_updateFournissseur";
+            this.bt_updateFournissseur.Size = new System.Drawing.Size(122, 45);
+            this.bt_updateFournissseur.TabIndex = 2;
+            this.bt_updateFournissseur.Text = "Modifier";
+            this.bt_updateFournissseur.UseVisualStyleBackColor = false;
+            this.bt_updateFournissseur.Click += new System.EventHandler(this.bt_updateFournissseur_Click);
+            // 
+            // dg_fournisseur
+            // 
+            this.dg_fournisseur.AutoGenerateColumns = false;
+            this.dg_fournisseur.BackgroundColor = System.Drawing.Color.Teal;
+            this.dg_fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_fournisseur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
+            this.dg_fournisseur.DataSource = this.bsFournisseur;
+            this.dg_fournisseur.Location = new System.Drawing.Point(255, 96);
+            this.dg_fournisseur.Name = "dg_fournisseur";
+            this.dg_fournisseur.Size = new System.Drawing.Size(603, 220);
+            this.dg_fournisseur.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn15
             // 
@@ -443,48 +486,6 @@
             // 
             this.bsFournisseur.DataSource = typeof(ApplicationAccrobrancheProper.Fournisseur);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.bt_deleteProduct);
-            this.groupBox1.Controls.Add(this.bt_addProduct);
-            this.groupBox1.Controls.Add(this.bt_updateProduct);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(355, 461);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 65);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.bt_deleteCategorie);
-            this.groupBox2.Controls.Add(this.bt_addCategorie);
-            this.groupBox2.Controls.Add(this.bt_updateCategorie);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(359, 322);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(459, 86);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Actions";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.bt_deleteFournisseur);
-            this.groupBox3.Controls.Add(this.bt_addFournissseur);
-            this.groupBox3.Controls.Add(this.bt_updateFournissseur);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(340, 339);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(440, 82);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Actions";
-            // 
             // Frmcrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,22 +493,23 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1188, 575);
             this.Controls.Add(this.tabCrud);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmcrud";
             this.Text = "Options";
             this.Load += new System.EventHandler(this.Frmcrud_Load);
             this.tabCrud.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_categories)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_fournisseur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCategorie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsFournisseur)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_products)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_categories)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsCategorie)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_fournisseur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFournisseur)).EndInit();
             this.ResumeLayout(false);
 
         }
