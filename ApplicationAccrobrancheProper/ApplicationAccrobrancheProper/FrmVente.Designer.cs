@@ -289,6 +289,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVente";
             this.Text = "Formulaire De Vente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVente_FormClosing);
             this.Load += new System.EventHandler(this.FrmVente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

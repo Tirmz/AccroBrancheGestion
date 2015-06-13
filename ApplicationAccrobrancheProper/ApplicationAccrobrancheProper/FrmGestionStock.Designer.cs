@@ -378,7 +378,7 @@
             // bs
             // 
             this.bs.DataSource = typeof(ApplicationAccrobrancheProper.Produit);
-            this.bs.CurrentChanged += new System.EventHandler(this.bs_CurrentChanged);
+            //this.bs.CurrentChanged += new System.EventHandler(this.bs_CurrentChanged);
             // 
             // FrmGestionStock
             // 

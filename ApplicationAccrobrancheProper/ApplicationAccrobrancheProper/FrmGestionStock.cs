@@ -31,14 +31,14 @@ namespace ApplicationAccrobrancheProper
             }
         }
 
-        private void bs_CurrentChanged(object sender, EventArgs e)
+      /*  private void bs_CurrentChanged(object sender, EventArgs e)
         {
             if (bs.Current != null)
             {
                 bs.EndEdit();
                 bd.SaveChanges();
             }
-        }
+        }*/
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
@@ -130,7 +130,11 @@ namespace ApplicationAccrobrancheProper
         {
             FrmVente frm = new FrmVente(bd);
             frm.ShowDialog();
+            System.Data.Objects.ObjectContext context = ((System.Data.Entity.Infrastructure.IObjectContextAdapter)bd).ObjectContext;
+            context.Refresh(System.Data.Objects.RefreshMode.StoreWins, bd.Produit);
             bs.DataSource = bd.Produit.ToList();
+            setRedStockAlert();
+            setMessageEtatStock();
         }
         /// <summary>
         /// Ouvre le formulaire permettant de configurer les Produits, fournisseurs, catégorie (Méthodes CRUD).

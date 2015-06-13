@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ApplicationAccrobrancheProper
 {
@@ -159,8 +160,32 @@ namespace ApplicationAccrobrancheProper
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Stock pas assez Approvisionné");            
+                MessageBox.Show("Stock pas assez Approvisionné");
+                listelignes.Clear();
+                
             }
+        }
+        /// <summary>
+        /// Permet de vider les ventes qui ne contiennent pas de lignes de vente.
+        /// </summary>
+        private void clearEmptySells()
+        {
+            MySqlConnection connexion = new MySqlConnection();
+            connexion.ConnectionString = "server=mysql.montpellier.epsi.fr;user id=tristan.prophete;password=epsi146VOS;persistsecurityinfo=True;port=5206;database=accrocbranchetp";
+            MySqlCommand cmd = new MySqlCommand();
+            connexion.Open();
+            
+            cmd.Connection = connexion;
+            cmd.CommandText = "DeleteVenteEmpty";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.ExecuteNonQuery();
+
+            connexion.Close();
+        }
+
+        private void FrmVente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            clearEmptySells();
         }
     }
 }
